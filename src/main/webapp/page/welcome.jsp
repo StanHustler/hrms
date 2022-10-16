@@ -100,24 +100,7 @@
                 </table>
             </div>
         </fieldset>
-        <fieldset class="layui-elem-field">
-            <legend>开发团队</legend>
-            <div class="layui-field-box">
-                <table class="layui-table">
-                    <tbody>
-                        <tr>
-                            <th>版权所有</th>
-                            <td>
-                                <a href="" class='x-a' target="_blank">jgm</a></td>
-                        </tr>
-                        <tr>
-                            <th>开发者</th>
-                            <td>jgm</td></tr>
-                    </tbody>
-                </table>
-            </div>
-        </fieldset>
-        <blockquote class="layui-elem-quote layui-quote-nm">thanks av8d</blockquote>
+
     </div>
         <script>
         var _hmt = _hmt || [];
@@ -140,8 +123,8 @@
     var minutes=now.getMinutes();
     var seconds=now.getSeconds();
 
-       document.getElementById("showDate").innerHTML = "当前时间 :  " + year + "年 " + month + "月 " + day
-           + "日 " + hours + "：" + minutes + "：" + seconds;
+       document.getElementById("showDate").innerHTML = "当前时间:  " + year + "年 " + month + "月 " + day
+           + "日 " + hours + ":" + minutes + ":" + seconds;
   }
   setInterval(myDate,1000);
         </script>

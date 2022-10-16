@@ -5,24 +5,19 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.ImportResource;
 import org.springframework.web.filter.CharacterEncodingFilter;
-import org.springframework.web.servlet.ViewResolver;
-import org.springframework.web.servlet.view.InternalResourceViewResolver;
-import org.springframework.web.servlet.view.JstlView;
 import org.springframework.web.socket.config.annotation.EnableWebSocket;
 import tk.mybatis.spring.annotation.MapperScan;
 
 @MapperScan("cn.pzhu.pserson.dao.dao")
 @SpringBootApplication
-@ComponentScan(basePackages = "cn.pzhu.pserson")
 @ImportResource("classpath:springmvc-config.xml")
 @EnableWebSocket
-public class PsersonApplication {
+public class PersonApplication {
 
   public static void main(String[] args) {
-    SpringApplication.run(PsersonApplication.class, args);
+    SpringApplication.run(PersonApplication.class, args);
   }
 
   @Bean

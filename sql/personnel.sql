@@ -12,6 +12,7 @@ File Encoding         : 65001
 
 Date: 2019-04-19 17:08:44
 */
+USE hrms;
 
 SET FOREIGN_KEY_CHECKS=0;
 
@@ -119,6 +120,6 @@ CREATE TABLE `user` (
 
 
 
-INSERT INTO `personnel`.`user`(`id`, `loginname`, `password`, `level`, `createdate`, `username`) VALUES (9, 'root', '4a7d1ed414474e4033ac29ccb8653d9b', '0', '19-05-17 02:04:50', '金国民');
-INSERT INTO `personnel`.`user`(`id`, `loginname`, `password`, `level`, `createdate`, `username`) VALUES (10, 'huangjie', '4a7d1ed414474e4033ac29ccb8653d9b', '1', '19-05-17 02:13:13', '黄杰');
+INSERT INTO `hrms`.`user`(`id`, `loginname`, `password`, `level`, `createdate`, `username`) VALUES (9, 'root', '4a7d1ed414474e4033ac29ccb8653d9b', '0', '19-05-17 02:04:50', '金国民');
+INSERT INTO `hrms`.`user`(`id`, `loginname`, `password`, `level`, `createdate`, `username`) VALUES (10, 'huangjie', '4a7d1ed414474e4033ac29ccb8653d9b', '1', '19-05-17 02:13:13', '黄杰');
 
