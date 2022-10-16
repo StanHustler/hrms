@@ -173,7 +173,7 @@ xblock{
     margin-top: 0px;
 }
 .layui-input:focus, .layui-textarea:focus {
-    border-color: #189f92!important;
+    border-color: #1890ff!important;
 }
 
 .page{
@@ -526,4 +526,10 @@ table th, table td {
 
 .layui-elem-quote, .left-nav{
     background-color: #f8f8f8;
+}
+
+.jcc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

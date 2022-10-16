@@ -7,6 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <title>人事管理系统</title>
+    <meta name="theme-color" content="#1890ff">
     <meta name="renderer" content="webkit|ie-comp|ie-stand">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport"
@@ -203,6 +204,27 @@
                     </li>
                 </ul>
             </li>
+            <li>
+                <a href="javascript:;">
+                    <i class="layui-icon">&#xe716;</i>
+                    <cite>系统信息</cite>
+                    <i class="iconfont nav_right">&#xe697;</i>
+                </a>
+                <ul class="sub-menu">
+                    <li>
+                        <a _href="${ctx }/sysinfo">
+                            <i class="iconfont">&#xe6a7;</i>
+                            <cite>运行环境</cite>
+                        </a>
+                    </li>
+                    <li>
+                        <a _href="${ctx }/log">
+                            <i class="iconfont">&#xe6a7;</i>
+                            <cite>日志文件</cite>
+                        </a>
+                    </li>
+                </ul>
+            </li>
         </ul>
     </div>
 </div>
@@ -212,7 +234,7 @@
 <div class="page-content">
     <div class="layui-tab tab" lay-filter="xbs_tab" lay-allowclose="false">
         <ul class="layui-tab-title">
-            <li class="home"><i class="layui-icon">&#xe68e;</i>我的桌面</li>
+            <li class="home"><i class="layui-icon">&#xe68e;</i>首页</li>
         </ul>
         <div class="layui-tab-content">
             <div class="layui-tab-item layui-show">

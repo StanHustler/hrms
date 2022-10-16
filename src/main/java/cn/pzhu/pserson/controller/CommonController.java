@@ -23,7 +23,6 @@ public class CommonController {
 
   @RequestMapping(value = "/welcome")
   public String welcome() {
-    String blank = "welcome";
-    return blank;
+    return "welcome";
   }
 }
