@@ -29,36 +29,37 @@
                                         <li class="layui-col-xs2">
                                             <a href="javascript:;" class="x-admin-backlog-body">
                                                 <h3>管理员数</h3>
-                                                <p>
-                                                    <cite>${headerr.adminNum}</cite></p>
+                                                <p><cite>${headerr.adminNum}</cite></p>
                                             </a>
                                         </li>
                                         <li class="layui-col-xs2">
                                             <a href="javascript:;" class="x-admin-backlog-body">
                                                 <h3>部门数</h3>
-                                                <p>
-                                                    <cite>${headerr.deptNum}</cite></p>
+                                                <p><cite>${headerr.deptNum}</cite></p>
                                             </a>
                                         </li>
                                         <li class="layui-col-xs2">
                                             <a href="javascript:;" class="x-admin-backlog-body">
                                                 <h3>职工数</h3>
-                                                <p>
-                                                    <cite>${headerr.employeeNum}</cite></p>
+                                                <p><cite>${headerr.employeeNum}</cite></p>
                                             </a>
                                         </li>
                                         <li class="layui-col-xs2">
                                             <a href="javascript:;" class="x-admin-backlog-body">
                                                 <h3>公告数</h3>
-                                                <p>
-                                                    <cite>${headerr.noticeNum}</cite></p>
+                                                <p><cite>${headerr.noticeNum}</cite></p>
                                             </a>
                                         </li>
                                         <li class="layui-col-xs2">
                                             <a href="javascript:;" class="x-admin-backlog-body">
                                                 <h3>文件数</h3>
-                                                <p>
-                                                    <cite>${headerr.docNum}</cite></p>
+                                                <p><cite>${headerr.docNum}</cite></p>
+                                            </a>
+                                        </li>
+                                        <li class="layui-col-xs2">
+                                            <a href="javascript:;" class="x-admin-backlog-body">
+                                                <h3>日志数</h3>
+                                                <p><cite>1</cite></p>
                                             </a>
                                         </li>
                                     </ul>
@@ -69,49 +70,9 @@
                 </div>
             </div>
         </fieldset>
-     
-        <fieldset class="layui-elem-field">
-            <legend>系统信息</legend>
-            <div class="layui-field-box">
-                <table class="layui-table">
-                    <tbody>
-                        <tr>
-                            <th>版本</th>
-                            <td>1.0</td></tr>
-                        <tr>
-                            <th>服务器地址</th>
-                            <td>xxxx</td></tr>
-                        <tr>
-                            <th>操作系统</th>
-                            <td>win10</td></tr>
-                        <tr>
-                            <th>运行环境</th>
-                            <td>Apache Tomcat 8.0.23</td></tr>
-                        <tr>
-                            <th>MYSQL版本</th>
-                            <td>5.6</td></tr>
-                        <tr>
-                            <th>jdk</th>
-                            <td>1.8</td></tr>
-                        <tr>
-                            <th>剩余空间</th>
-                            <td>1wt</td></tr>
-                    </tbody>
-                </table>
-            </div>
-        </fieldset>
+
 
     </div>
-        <script>
-        var _hmt = _hmt || [];
-        (function() {
-          var hm = document.createElement("script");
-          hm.src = "https://hm.baidu.com/hm.js?b393d153aeb26b46e9431fabaf0f6190";
-          var s = document.getElementsByTagName("script")[0]; 
-          s.parentNode.insertBefore(hm, s);
-        })();
-        </script>
-
         <script type="text/javascript">
            var i=0;
      function myDate(){

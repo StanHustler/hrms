@@ -24,16 +24,13 @@
   </head>
   
   <body>
-    <div class="x-nav">
-      <span class="layui-breadcrumb">
-        <a href="">首页</a>
-        <a>
-          <cite>用户信息</cite></a>
-      </span>
-      <button type="button" onclick="location.href='${ctx}/user/add'" class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:innert;margin-left:75%;;"  ><i class="layui-icon"></i>增加</button>
-      <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right" href="${ctx }/user/list?pageNum=${pageNum}&pageSize=6" title="刷新">
-        <i class="layui-icon" style="line-height:30px">ဂ</i></a>
-    </div>
+  <div class="x-nav">
+    <span class="layui-breadcrumb" style="visibility: visible;">
+        <a href="${ctx}/">首页</a><span lay-separator="">/</span>
+        <a href="">用户管理</a><span lay-separator="">/</span>
+        <a><cite>用户列表</cite></a>
+    </span>
+  </div>
     <div class="x-body">
       <div class="layui-row" style="" align="center">
         <form class="layui-form layui-col-md12 x-so" method="get" action="${ctx }/user/list">

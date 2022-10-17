@@ -63,16 +63,15 @@
         </div>
         <div class="layui-form-item">
             <label for="level" class="layui-form-label">
-                <span class="x-red">*</span>LEVEL
+                <span class="x-red">*</span>用户组
             </label>
             <div class="layui-input-inline">
                 <select name="level" lay-verify="required" lay-search="">
-                    <option value="1">人事</option>
                     <option value="0">主管</option>
+                    <option value="1">人事</option>
                 </select>
             </div>
         </div>
-
 
         <div class="layui-form-item">
             <label for="L_repass" class="layui-form-label">

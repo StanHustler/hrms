@@ -32,6 +32,18 @@
 
     <ul class="layui-nav right" lay-filter="">
         <li class="layui-nav-item">
+            <a>
+                <i class="layui-icon">&#xe66a;</i>
+                主题设置
+            </a>
+        </li>
+        <li class="layui-nav-item">
+            <a>
+                <i class="layui-icon">&#xe667;</i>
+                消息通知
+            </a>
+        </li>
+        <li class="layui-nav-item">
             <a href="javascript:;">${user_session.username}</a>
             <dl class="layui-nav-child"> <!-- 二级菜单 -->
                 <dd><a href="./logout?username=${user_session.username}">退出</a></dd>
@@ -50,7 +62,7 @@
                 <li>
                     <a href="javascript:;">
                         <i class="iconfont">&#xe6b8;</i>
-                        <cite>用户管理</cite>
+                        <cite>用户管理[管理员]</cite>
                         <i class="iconfont nav_right">&#xe697;</i>
                     </a>
                     <ul class="sub-menu">

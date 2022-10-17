@@ -24,17 +24,15 @@
   </head>
   
   <body>
-    <div class="x-nav">
-      <span class="layui-breadcrumb">
-        <a href="">首页</a>
-        <a href="">演示</a>
-        <a>
-          <cite>导航元素</cite></a>
-      </span>
-      <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right" href="../dept/list?pageNum=${pageInfo.pageNum}&pageSize=6" title="刷新">
-        <i class="layui-icon" style="line-height:30px">ဂ</i></a>
-    </div>
-    <div class="x-body">
+  <div class="x-nav">
+    <span class="layui-breadcrumb" style="visibility: visible;">
+        <a href="${ctx}/">首页</a><span lay-separator="">/</span>
+        <a href="">部门管理</a><span lay-separator="">/</span>
+        <a><cite>部门列表</cite></a>
+    </span>
+  </div>
+
+  <div class="x-body">
       <div class="layui-row" style="" align="center">
         <form class="layui-form layui-col-md12 x-so" method="get" action="${ctx }/dept/list">
           <!-- <input class="layui-input" placeholder="开始日" name="start" id="start">
