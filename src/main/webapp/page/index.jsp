@@ -240,6 +240,21 @@
             <li>
                 <a href="javascript:;">
                     <i class="layui-icon">&#xe716;</i>
+                    <cite>仓库管理</cite>
+                    <i class="iconfont nav_right">&#xe697;</i>
+                </a>
+                <ul class="sub-menu">
+                    <li>
+                        <a _href="${ctx}/inventory/list">
+                            <i class="iconfont">&#xe6a7;</i>
+                            <cite>仓库清单</cite>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <i class="layui-icon">&#xe716;</i>
                     <cite>系统信息</cite>
                     <i class="iconfont nav_right">&#xe697;</i>
                 </a>

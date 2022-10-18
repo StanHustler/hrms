@@ -45,8 +45,8 @@
             <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
         </table>-->
 
-        <table tableName="purchase" domainObjectName="Purchase" ></table>
+<!--        <table tableName="purchase" domainObjectName="Purchase" ></table>-->
         <table tableName="inventory" domainObjectName="Inventory"></table>
-        <table tableName="sale" domainObjectName="Sale" ></table>
+<!--        <table tableName="sale" domainObjectName="Sale" ></table>-->
     </context>
 </generatorConfiguration>
