@@ -1,6 +1,7 @@
 package cn.pzhu.pserson.service;
 
 import cn.pzhu.pserson.dao.dao.InventoryMapper;
+import cn.pzhu.pserson.dao.dao.PurchaseMapper;
 import cn.pzhu.pserson.domain.Inventory;
 import cn.pzhu.pserson.domain.InventoryExample;
 import org.springframework.beans.factory.annotation.Autowired;
