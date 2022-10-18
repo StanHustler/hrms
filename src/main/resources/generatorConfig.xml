@@ -6,8 +6,7 @@
 <generatorConfiguration>
 <!--    <properties resource="config.properties"/>-->
 
-    <context id="Mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">
-        <property name="beginningDelimiter" value="`"/>
+    <context id="Mysql" targetRuntime="MyBatis3" defaultModelType="flat">
 <!--        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">-->
 <!--            <property name="mappers" value="tk.mybatis.mapper.common.Mapper"/>-->
 <!--        </plugin>-->
@@ -20,11 +19,18 @@
         </jdbcConnection>
 
 
-        <javaModelGenerator targetPackage="cn.pzhu.pserson.domain" targetProject="src/main/java"/>
+        <javaModelGenerator targetPackage="cn.pzhu.pserson.domain" targetProject="src/main/java">
+            <property name="enableSubPackages" value="true" />
+            <property name="trimStrings" value="true" />
+        </javaModelGenerator>
 
-        <sqlMapGenerator targetPackage="cn.pzhu.pserson.dao.mapper"  targetProject="src/main/java"/>
+        <sqlMapGenerator targetPackage="cn.pzhu.pserson.dao.mapper"  targetProject="src/main/java">
+            <property name="enableSubPackages" value="true" />
+        </sqlMapGenerator>
 
-        <javaClientGenerator targetPackage="cn.pzhu.pserson.dao.dao" targetProject="src/main/java" type="XMLMAPPER" />
+        <javaClientGenerator type="XMLMAPPER" targetPackage="cn.pzhu.pserson.dao.dao"  targetProject="src/main/java">
+            <property name="enableSubPackages" value="true" />
+        </javaClientGenerator>
 
 <!--        <table tableName="dept" >
             <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
@@ -45,8 +51,8 @@
             <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
         </table>-->
 
-<!--        <table tableName="purchase" domainObjectName="Purchase" ></table>-->
+        <table tableName="purchase" domainObjectName="Purchase"></table>
         <table tableName="inventory" domainObjectName="Inventory"></table>
-<!--        <table tableName="sale" domainObjectName="Sale" ></table>-->
+        <table tableName="sale" domainObjectName="Sale" ></table>
     </context>
 </generatorConfiguration>

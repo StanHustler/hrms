@@ -2,6 +2,7 @@ package cn.pzhu.pserson.service;
 
 import cn.pzhu.pserson.dao.dao.PurchaseMapper;
 import cn.pzhu.pserson.domain.Purchase;
+import cn.pzhu.pserson.domain.PurchaseExample;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +15,7 @@ public class PurchaseService {
     private PurchaseMapper purchaseMapper;
 
     public List<Purchase> getPurchase(){
-        return purchaseMapper.selectAll();
+        return purchaseMapper.selectByExample(new PurchaseExample());
     }
 
     public void insert(Purchase purchase){
