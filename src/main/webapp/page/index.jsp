@@ -219,6 +219,27 @@
             <li>
                 <a href="javascript:;">
                     <i class="layui-icon">&#xe716;</i>
+                    <cite>采购管理</cite>
+                    <i class="iconfont nav_right">&#xe697;</i>
+                </a>
+                <ul class="sub-menu">
+                    <li>
+                        <a _href="${ctx}/purchase/list">
+                            <i class="iconfont">&#xe6a7;</i>
+                            <cite>采购订单</cite>
+                        </a>
+                    </li>
+                    <li>
+                        <a _href="${ctx}/purchase/add">
+                            <i class="iconfont">&#xe6a7;</i>
+                            <cite>采购入库</cite>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <i class="layui-icon">&#xe716;</i>
                     <cite>系统信息</cite>
                     <i class="iconfont nav_right">&#xe697;</i>
                 </a>
