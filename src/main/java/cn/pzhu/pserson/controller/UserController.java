@@ -1,6 +1,7 @@
 package cn.pzhu.pserson.controller;
 
 import cn.pzhu.pserson.domain.User;
+import cn.pzhu.pserson.service.FinanceService;
 import cn.pzhu.pserson.service.RainService;
 import cn.pzhu.pserson.service.UserService;
 import cn.pzhu.pserson.util.Constants;
@@ -28,6 +29,9 @@ public class UserController {
 
   @Autowired
   private UserService userService;
+
+  @Autowired
+  private FinanceService financeService;
 
   // 如果在目录下输入为空，则跳转到指定链接
   @RequestMapping(value = "/user/")
@@ -60,6 +64,8 @@ public class UserController {
       session.setAttribute("userid",user.getId());
       session.setAttribute("username",user.getUsername());
       session.setAttribute("headerr",userService.countHeader());
+      session.setAttribute("input",financeService.getInput());
+      session.setAttribute("output",financeService.getOutput());
       mv.setViewName("redirect:/index");
     } else {
       mv.addObject("message", "登录名或密码错误!请重新输入");

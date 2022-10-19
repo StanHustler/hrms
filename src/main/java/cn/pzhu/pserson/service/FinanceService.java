@@ -21,4 +21,26 @@ public class FinanceService {
     public void insert(Finance finance) {
         financeMapper.insert(finance);
     }
+
+    public int getInput(){
+        FinanceExample example = new FinanceExample();
+        example.createCriteria().andCountGreaterThan(0);
+        List<Finance> finances = financeMapper.selectByExample(example);
+        Integer res = 0;
+        for (Finance finance:finances){
+            res+=finance.getCount();
+        }
+        return res;
+    }
+
+    public int getOutput(){
+        FinanceExample example = new FinanceExample();
+        example.createCriteria().andCountLessThan(0);
+        List<Finance> finances = financeMapper.selectByExample(example);
+        Integer res = 0;
+        for (Finance finance:finances){
+            res+=finance.getCount();
+        }
+        return res;
+    }
 }

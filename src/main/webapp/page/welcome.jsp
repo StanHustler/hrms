@@ -70,8 +70,8 @@
                 </div>
             </div>
         </fieldset>
-
-
+        <p>input <cite>${input}</cite></p>
+        <p>output <cite>${output}</cite></p>
     </div>
         <script type="text/javascript">
            var i=0;
