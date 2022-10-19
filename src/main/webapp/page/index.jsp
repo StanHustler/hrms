@@ -294,6 +294,27 @@
                     </li>
                 </ul>
             </li>
+            <li>
+                <a href="javascript:;">
+                    <i class="layui-icon">&#xe716;</i>
+                    <cite>财务管理</cite>
+                    <i class="iconfont nav_right">&#xe697;</i>
+                </a>
+                <ul class="sub-menu">
+                    <li>
+                        <a _href="${ctx}/finance/list">
+                            <i class="iconfont">&#xe6a7;</i>
+                            <cite>财务清单</cite>
+                        </a>
+                    </li>
+                    <li>
+                        <a _href="${ctx}/finance/add">
+                            <i class="iconfont">&#xe6a7;</i>
+                            <cite>其他开支</cite>
+                        </a>
+                    </li>
+                </ul>
+            </li>
         </ul>
     </div>
 </div>

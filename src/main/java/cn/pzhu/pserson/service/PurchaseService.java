@@ -1,11 +1,9 @@
 package cn.pzhu.pserson.service;
 
+import cn.pzhu.pserson.dao.dao.FinanceMapper;
 import cn.pzhu.pserson.dao.dao.InventoryMapper;
 import cn.pzhu.pserson.dao.dao.PurchaseMapper;
-import cn.pzhu.pserson.domain.Inventory;
-import cn.pzhu.pserson.domain.InventoryExample;
-import cn.pzhu.pserson.domain.Purchase;
-import cn.pzhu.pserson.domain.PurchaseExample;
+import cn.pzhu.pserson.domain.*;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,6 +17,8 @@ public class PurchaseService {
     private PurchaseMapper purchaseMapper;
     @Autowired
     private InventoryMapper inventoryMapper;
+    @Autowired
+    private FinanceMapper financeMapper;
 
     public List<Purchase> getPurchase(){
         return purchaseMapper.selectByExample(new PurchaseExample());
@@ -44,6 +44,12 @@ public class PurchaseService {
             example.createCriteria().andIdEqualTo(inventory.getId());
             inventoryMapper.updateByExampleSelective(inventory, example);
         }
+
+        Finance finance = new Finance();
+        finance.setCount(purchase.getMoney()*-1);
+        finance.setTime(purchase.getTime());
+        finance.setInfo("购买：" + purchase.getName()+"*"+purchase.getCount());
+        financeMapper.insert(finance);
     }
 
     public void removeById(Integer id){
