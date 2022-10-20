@@ -74,6 +74,8 @@
         <p>output <cite>${output}</cite></p>
         <p>numShort <cite>${numShort}</cite></p>
         <p>nameMostShort <cite>${nameMostShort}</cite></p>
+        <p>getCountSale <cite>${getCountSale}</cite></p>
+        <p>getCountPurchase <cite>${getCountPurchase}</cite></p>
     </div>
         <script type="text/javascript">
            var i=0;

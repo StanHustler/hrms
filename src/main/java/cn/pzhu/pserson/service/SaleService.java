@@ -45,4 +45,8 @@ public class SaleService {
         finance.setInfo("售出："+sale.getName()+"*"+sale.getCount());
         financeMapper.insert(finance);
     }
+
+    public Integer getCountSale(){
+        return saleMapper.selectByExample(new SaleExample()).size();
+    }
 }

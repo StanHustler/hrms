@@ -55,4 +55,8 @@ public class PurchaseService {
     public void removeById(Integer id){
         purchaseMapper.deleteByPrimaryKey(id);
     }
+
+    public Integer getCountPurchase(){
+        return purchaseMapper.selectByExample(new PurchaseExample()).size();
+    }
 }
