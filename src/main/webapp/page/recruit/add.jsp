@@ -22,7 +22,14 @@
   </head>
   
   <body>
-        <div class="x-body">
+  <div class="x-nav">
+    <span class="layui-breadcrumb" style="visibility: visible;">
+        <a href="${ctx}/">首页</a><span lay-separator="">/</span>
+        <a href="">招聘管理</a><span lay-separator="">/</span>
+        <a><cite>招聘需求</cite></a>
+    </span>
+  </div>
+        <div class="x-body" style="padding: 50px 0 0 30px">
             <form class="layui-form" method="POST" id="deptForm"  action="${ctx}/recruit/add">
             <input type="hidden" name="id" id="id" value="${job.id }" >
             <div class="layui-form-item">

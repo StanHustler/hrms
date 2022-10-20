@@ -24,12 +24,52 @@
 </head>
 
 <body>
-<div class="x-body">
+<div class="x-nav">
+    <span class="layui-breadcrumb" style="visibility: visible;">
+        <a href="${ctx}/">首页</a><span lay-separator="">/</span>
+        <a href="">采购管理</a><span lay-separator="">/</span>
+        <a><cite>采购入库</cite></a>
+    </span>
+</div>
+<div class="x-body" style="padding: 50px 0 0 30px">
     <form class="layui-form" method="POST" id="deptForm"  action="${ctx}/purchase/add">
-        物品名称<input name="name" id="name"><br>
-        数量<input type="text" name="count" id="count"><br>
-        价格<input type="text" name="money" id="money"><br>
-        签名<input type="text" name="sign" id="sign">
+        <div class="layui-form-item">
+            <label for="phone" class="layui-form-label">
+                <span class="x-red">*</span>物品名称
+            </label>
+            <div class="layui-input-inline">
+                <input type="text" id="address" name="address" required="" lay-verify="required"
+                       autocomplete="off" class="layui-input" value="${job.address }" style="width: 240%">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label for="phone" class="layui-form-label">
+                <span class="x-red">*</span>数量
+            </label>
+            <div class="layui-input-inline">
+                <input type="text" id="address" name="address" required="" lay-verify="required"
+                       autocomplete="off" class="layui-input" value="${job.address }" style="width: 240%">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label for="phone" class="layui-form-label">
+                <span class="x-red">*</span>价格
+            </label>
+            <div class="layui-input-inline">
+                <input type="text" id="address" name="address" required="" lay-verify="required"
+                       autocomplete="off" class="layui-input" value="${job.address }" style="width: 240%">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label for="phone" class="layui-form-label">
+                <span class="x-red">*</span>签名
+            </label>
+            <div class="layui-input-inline">
+                <input type="text" id="address" name="address" required="" lay-verify="required"
+                       autocomplete="off" class="layui-input" value="${job.address }" style="width: 240%">
+            </div>
+        </div>
+
         <div class="layui-form-item">
             <label for="L_repass" class="layui-form-label">
             </label>

@@ -27,8 +27,8 @@
 <div class="x-nav">
     <span class="layui-breadcrumb" style="visibility: visible;">
         <a href="${ctx}/">首页</a><span lay-separator="">/</span>
-        <a href="">部门管理</a><span lay-separator="">/</span>
-        <a><cite>部门列表</cite></a>
+        <a href="">采购管理</a><span lay-separator="">/</span>
+        <a><cite>采购订单</cite></a>
     </span>
 </div>
 

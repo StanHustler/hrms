@@ -24,26 +24,32 @@
   </head>
   
   <body>
-    <div class="x-body">
+  <div class="x-nav">
+    <span class="layui-breadcrumb" style="visibility: visible;">
+        <a href="${ctx}/">首页</a><span lay-separator="">/</span>
+        <a href="">员工管理</a><span lay-separator="">/</span>
+        <a><cite>添加员工</cite></a>
+    </span>
+  </div>
+    <div class="x-body" style="padding: 50px 0 0 30px">
         <form class="layui-form" method="POST" id="deptForm"  action="${ctx}/employee/add">
-        <input type="hidden" name="id" id="id" value="${job.id }" >
           <div class="layui-form-item" >
               <label for="username" class="layui-form-label">
                   <span class="x-red">*</span>姓名
               </label>
               <div class="layui-input-inline">
                   <input type="text" id="name" name="name" required="" lay-verify="required"
-                  autocomplete="off" class="layui-input" value="${job.name }">
+                  autocomplete="off" class="layui-input" value="${job.name }" style="width: 240%">
               </div>
-             
           </div>
+
           <div class="layui-form-item" >
               <label for="phone" class="layui-form-label">
                   <span class="x-red">*</span>身份证号码
               </label>
               <div class="layui-input-inline">
-                  <input type="text" id="cardId" name="cardId" required="" lay-verify="required"
-                  autocomplete="off" class="layui-input" value="${job.cardId }">
+                  <input type="text" id="name" name="name" required="" lay-verify="required"
+                         autocomplete="off" class="layui-input" value="${job.name }" style="width: 240%">
               </div>
           </div>
            <div class="layui-form-item">
@@ -51,8 +57,8 @@
                   <span class="x-red">*</span>性别
               </label>
               <div class="layui-input-inline">
-                  <input type="text" id="sex" name="sex" required="" lay-verify="required"
-                  autocomplete="off" class="layui-input" value="${job.sex }">
+                  <input type="text" id="name" name="name" required="" lay-verify="required"
+                         autocomplete="off" class="layui-input" value="${job.name }" style="width: 240%">
               </div>
           </div>
            <div class="layui-form-item">
@@ -61,7 +67,7 @@
               </label>
               <div class="layui-input-inline">
                   <input type="text" id="education" name="education" required="" lay-verify="required"
-                  autocomplete="off" class="layui-input" value="${job.education }">
+                  autocomplete="off" class="layui-input" value="${job.education }" style="width: 240%">
               </div>
           </div>
            <div class="layui-form-item">
@@ -70,7 +76,7 @@
               </label>
               <div class="layui-input-inline">
                   <input type="text" id="email" name="email" required="" lay-verify="required"
-                  autocomplete="off" class="layui-input" value="${job.email }">
+                  autocomplete="off" class="layui-input" value="${job.email }" style="width: 240%">
               </div>
           </div>
            <div class="layui-form-item">
@@ -79,7 +85,7 @@
               </label>
               <div class="layui-input-inline">
                   <input type="text" id="phone" name="phone" required="" lay-verify="required"
-                  autocomplete="off" class="layui-input" value="${job.phone }">
+                  autocomplete="off" class="layui-input" value="${job.phone }" style="width: 240%">
               </div>
           </div>
           <div class="layui-form-item">
@@ -88,7 +94,7 @@
               </label>
               <div class="layui-input-inline">
                   <input type="text" id="address" name="address" required="" lay-verify="required"
-                  autocomplete="off" class="layui-input" value="${job.address }">
+                  autocomplete="off" class="layui-input" value="${job.address }" style="width: 240%">
               </div>
           </div>
   			<div class="layui-form-item">

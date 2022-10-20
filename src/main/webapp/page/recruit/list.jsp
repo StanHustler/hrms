@@ -27,9 +27,8 @@
     <div class="x-nav">
       <span class="layui-breadcrumb">
         <a href="">首页</a>
-        <a href="">演示</a>
-        <a>
-          <cite>导航元素</cite></a>
+        <a href="">招聘管理</a>
+        <a><cite>招聘列表</cite></a>
       </span>
       <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right" href="../recruit/list?pageNum=1&pageSize=6" title="刷新">
         <i class="layui-icon" style="line-height:30px">ဂ</i></a>

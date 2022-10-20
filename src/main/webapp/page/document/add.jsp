@@ -24,7 +24,13 @@
   </head>
   
   <body>
-    <div class="x-body">
+  <div class="x-nav">
+    <span class="layui-breadcrumb" style="visibility: visible;">
+        <a href="${ctx}/">首页</a><span lay-separator="">/</span>
+        <a href="">下载中心</a><span lay-separator="">/</span>
+        <a><cite>上传文档</cite></a>
+    </span>
+    <div class="x-body" style="padding: 50px 0 0 30px">
         <form class="layui-form" method="POST" id="deptForm" enctype="multipart/form-data" action="${ctx}/document/add">
         <input type="hidden" name="userId" id="userId" value="${userId}" >
         <input type="hidden" name="id" id="id" value="${job.id }" >
@@ -34,7 +40,7 @@
               </label>
               <div class="layui-input-inline">
                   <input type="text" id="title" name="title" required="" lay-verify="required"
-                  autocomplete="off" class="layui-input" value="${job.title }">
+                  autocomplete="off" class="layui-input" value="${job.title }"style="width: 240%">
               </div>
              
           </div>
@@ -44,7 +50,7 @@
               </label>
               <div class="layui-input-inline">
                   <input type="text" id="remark" name="remark" required="" lay-verify="required"
-                  autocomplete="off" class="layui-input" value="${job.remark }">
+                  autocomplete="off" class="layui-input" value="${job.remark }" style="width: 240%">
               </div>
              
           </div>

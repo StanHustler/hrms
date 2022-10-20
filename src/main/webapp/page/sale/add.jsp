@@ -24,11 +24,46 @@
 </head>
 
 <body>
-<div class="x-body">
+<div class="x-nav">
+    <span class="layui-breadcrumb" style="visibility: visible;">
+        <a href="${ctx}/">首页</a><span lay-separator="">/</span>
+        <a href="">销售</a><span lay-separator="">/</span>
+        <a><cite>销售出库</cite></a>
+    </span>
+</div>
+<div class="x-body" style="padding: 50px 0 0 30px">
     <form class="layui-form" method="POST" id="deptForm"  action="${ctx}/sale/add">
-        物品名称<input name="name" id="name"><br>
-        数量<input type="text" name="count" id="count"><br>
-        价格<input type="text" name="money" id="money"><br>
+        <div class="layui-form-item">
+            <label for="phone" class="layui-form-label">
+                <span class="x-red">*</span>物品名称
+            </label>
+            <div class="layui-input-inline">
+                <input type="text" id="remark" name="remark" required="" lay-verify="required"
+                       autocomplete="off" class="layui-input" value="${dept.remark }" style="width: 240%">
+            </div>
+
+        </div>
+        <div class="layui-form-item">
+            <label for="phone" class="layui-form-label">
+                <span class="x-red">*</span>数量
+            </label>
+            <div class="layui-input-inline">
+                <input type="text" id="remark" name="remark" required="" lay-verify="required"
+                       autocomplete="off" class="layui-input" value="${dept.remark }" style="width: 240%">
+            </div>
+
+        </div>
+        <div class="layui-form-item">
+            <label for="phone" class="layui-form-label">
+                <span class="x-red">*</span>价格
+            </label>
+            <div class="layui-input-inline">
+                <input type="text" id="remark" name="remark" required="" lay-verify="required"
+                       autocomplete="off" class="layui-input" value="${dept.remark }" style="width: 240%">
+            </div>
+
+        </div>
+
         <div class="layui-form-item">
             <label for="L_repass" class="layui-form-label">
             </label>

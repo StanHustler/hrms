@@ -23,43 +23,52 @@
     <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
     <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style>
+        .layui-form-checked i, .layui-form-checked:hover i {
+            color: #1890ff;
+        }
+        .layui-form-checked, .layui-form-checked:hover {
+            border-color: #1890ff;
+        }
+        .layui-form-checked span, .layui-form-checked:hover span {
+            background-color: #1890ff;
+        }
+    </style>
 </head>
 
 <body>
-<div class="x-body">
-    <form class="layui-form" method="POST" id="deptForm" action="${ctx}/user/add">
+<div class="x-nav">
+    <span class="layui-breadcrumb" style="visibility: visible;">
+        <a href="${ctx}/">首页</a><span lay-separator="">/</span>
+        <a href="">用户管理</a><span lay-separator="">/</span>
+        <a><cite>添加用户</cite></a>
+    </span>
+</div>
+<div class="x-body" style="padding: 50px 0 0 30px" >
+    <form class="layui-form" method="POST" id="deptForm" action="${ctx}/user/add" >
         <input type="hidden" name="id" id="id" value="${job.id }">
         <div class="layui-form-item">
             <label for="username" class="layui-form-label">
                 <span class="x-red">*</span>登录名
             </label>
-            <div class="layui-input-inline">
-                <input type="text" id="username" name="loginname" required=""
-                       lay-verify="required"
-                       autocomplete="off" class="layui-input" value="${job.loginname }">
-            </div>
-            <div id="repeat"></div>
+            <input type="text" id="username" name="loginname"  required=""
+                   lay-verify="required" autocomplete="off" placeholder="请输入登录名" class="layui-input"
+                   value="${job.loginname }" style="width:40%">
         </div>
         <div class="layui-form-item">
             <label for="username" class="layui-form-label">
                 <span class="x-red">*</span>用户名
             </label>
-            <div class="layui-input-inline">
-                <input type="text" name="username" required="" lay-verify="required"
-                       autocomplete="off" class="layui-input" value="${job.username }">
-            </div>
-
-
+            <input type="text" name="username" required="" lay-verify="required" placeholder="请输入用户名"
+                   autocomplete="off" class="layui-input" value="${job.username }" style="width: 40%">
         </div>
         <div class="layui-form-item">
             <label for="username" class="layui-form-label">
                 <span class="x-red">*</span>密码
             </label>
-            <div class="layui-input-inline">
-                <input type="password" id="password" name="password" required=""
-                       lay-verify="required"
-                       autocomplete="off" class="layui-input" value="${job.password }">
-            </div>
+            <input type="password" id="password" name="password" required="" placeholder="请输入密码"
+            lay-verify="required" style="width: 40%"
+            autocomplete="off" class="layui-input" value="${job.password }">
         </div>
         <div class="layui-form-item">
             <label for="level" class="layui-form-label">
@@ -72,7 +81,30 @@
                 </select>
             </div>
         </div>
-
+        <div class="layui-form-item">
+            <div class="layui-input-block" style="margin-left:0;">
+                <label for="level" class="layui-form-label" style="float:left">
+                    仓库权限
+                </label>
+                <input type="checkbox" name="like[write]" title="ON">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block" style="margin-left:0;">
+                <label for="level" class="layui-form-label" style="float:left">
+                    财务权限
+                </label>
+                <input type="checkbox" name="like[write]" title="ON">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block" style="margin-left:0;">
+                <label for="level" class="layui-form-label" style="float:left">
+                    客户权限
+                </label>
+                <input type="checkbox" name="like[write]" title="ON">
+            </div>
+        </div>
         <div class="layui-form-item">
             <label for="L_repass" class="layui-form-label">
             </label>

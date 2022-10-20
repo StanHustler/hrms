@@ -24,29 +24,31 @@
   </head>
   
   <body>
-    <div class="x-body">
+  <div class="x-nav">
+    <span class="layui-breadcrumb" style="visibility: visible;">
+        <a href="${ctx}/">首页</a><span lay-separator="">/</span>
+        <a href="">职位管理</a><span lay-separator="">/</span>
+        <a><cite>添加职位</cite></a>
+    </span>
+  </div>
+    <div class="x-body" style="padding: 50px 0 0 30px">
         <form class="layui-form" method="POST" id="deptForm"  action="${ctx}/job/add">
         <input type="hidden" name="id" id="id" value="${job.id }" >
-          <div class="layui-form-item">
-              <label for="username" class="layui-form-label">
-                  <span class="x-red">*</span>职位名称
-              </label>
-              <div class="layui-input-inline">
-                  <input type="text" id="name" name="name" required="" lay-verify="required"
-                  autocomplete="off" class="layui-input" value="${job.name }">
-              </div>
-             
-          </div>
-          <div class="layui-form-item">
-              <label for="phone" class="layui-form-label">
-                  <span class="x-red">*</span>详细信息
-              </label>
-              <div class="layui-input-inline">
-                  <input type="text" id="remark" name="remark" required="" lay-verify="required"
-                  autocomplete="off" class="layui-input" value="${job.remark }">
-              </div>
-            
-          </div>
+            <div class="layui-form-item">
+                <label for="username" class="layui-form-label">
+                    <span class="x-red">*</span>职位名称
+                </label>
+                <input type="text" id="username" name="loginname"  required=""
+                       lay-verify="required" autocomplete="off" placeholder="请输入登录名" class="layui-input"
+                       value="${job.name }" style="width:40%">
+            </div>
+            <div class="layui-form-item">
+                <label for="username" class="layui-form-label">
+                    <span class="x-red">*</span>详细信息
+                </label>
+                <input type="text" name="username" required="" lay-verify="required" placeholder="请输入用户名"
+                       autocomplete="off" class="layui-input" value="${job.remark }" style="width: 40%">
+            </div>
           <div class="layui-form-item">
             <label for="phone" class="layui-form-label">
                 <span class="x-red">*</span>选择部门

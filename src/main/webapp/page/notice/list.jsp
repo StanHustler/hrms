@@ -27,8 +27,7 @@
     <div class="x-nav">
       <span class="layui-breadcrumb">
         <a href="">首页</a>
-        <a>
-          <cite>公告信息</cite></a>
+        <a><cite>公告查询</cite></a>
       </span>
       <button type="button" onclick="location.href='${ctx}/document/add'" class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:innert;margin-left:75%;;"  ><i class="layui-icon"></i>增加</button>
       <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right" href="${ctx }/notice/list?pageNum=${pageInfo.pageNum}&pageSize=6" title="刷新">

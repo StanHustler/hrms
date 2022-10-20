@@ -24,16 +24,22 @@
   </head>
   
   <body>
-    <div class="x-body">
+  <div class="x-nav">
+    <span class="layui-breadcrumb" style="visibility: visible;">
+        <a href="${ctx}/">首页</a><span lay-separator="">/</span>
+        <a href="">部门管理</a><span lay-separator="">/</span>
+        <a><cite>添加部门</cite></a>
+    </span>
+  </div>
+    <div class="x-body" style="padding: 50px 0 0 30px">
         <form class="layui-form" method="POST" id="deptForm"  action="${ctx}/dept/add">
-        <input type="hidden" name="id" id="id" value="${dept.id }" >
           <div class="layui-form-item">
               <label for="username" class="layui-form-label">
                   <span class="x-red">*</span>部门名称
               </label>
               <div class="layui-input-inline">
                   <input type="text" id="name" name="name" required="" lay-verify="required"
-                  autocomplete="off" class="layui-input" value="${dept.name }">
+                  autocomplete="off" class="layui-input" value="${dept.name }" style="width: 240%">
               </div>
              
           </div>
@@ -43,7 +49,7 @@
               </label>
               <div class="layui-input-inline">
                   <input type="text" id="remark" name="remark" required="" lay-verify="required"
-                  autocomplete="off" class="layui-input" value="${dept.remark }">
+                  autocomplete="off" class="layui-input" value="${dept.remark }" style="width: 240%">
               </div>
             
           </div>

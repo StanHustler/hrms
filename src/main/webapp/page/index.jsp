@@ -20,7 +20,30 @@
     <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
     <script src="${ctx}/public/lib/layui/layui.js" charset="utf-8"></script>
     <script type="text/javascript" src="${ctx}/public/js/xadmin.js"></script>
-
+    <style>
+        .layui-nav-child{
+            min-width: 200%;
+            min-height: 300%;
+        }
+        #btin{
+            width: 38px;
+            height: 38px;
+            box-sizing: border-box;
+            display: block;
+            margin: 2px auto 0px;
+            background-color:#FFB800;
+            border: 2px solid #fff;
+        }
+        .out{
+            width: 42px;
+            height: 42px;
+            border-radius: 4px;
+            display:inline-block;
+        }
+        #btin button{
+            border: none;
+        }
+    </style>
 </head>
 <body>
 <!-- 顶部开始 -->
@@ -32,10 +55,47 @@
 
     <ul class="layui-nav right" lay-filter="">
         <li class="layui-nav-item">
-            <a>
+            <a href="javascript:;">
                 <i class="layui-icon">&#xe66a;</i>
-                主题设置
+                主题颜色
             </a>
+            <dl class="layui-nav-child">
+                            <div style="margin-top:30px;text-align: center;">
+                                <label style="color: black">Backgroud Color</label><br>
+                                <div class="out" id="btout1">
+                                    <div id="btin" onclick="change1()" >
+                                        <button ></button>
+                                    </div>
+                                </div>
+                                <div class="out" id="btout2" >
+                                    <div id="btin" onclick="change2()" style="background:#393D49;">
+                                        <button></button>
+                                    </div>
+                                </div>
+                                <div class="out" id="btout3">
+                                    <div id="btin" onclick="change3()" style="background:#009688;">
+                                        <button></button>
+                                    </div>
+                                </div>
+                            </div>
+                <script>
+                    function change1(){
+                      document.getElementById("btout1").style.background="#FFB800";
+                        document.getElementById("btout2").style.background="transparent";
+                        document.getElementById("btout3").style.background="transparent";
+                    }
+                    function change2(){
+                        document.getElementById("btout2").style.background="#393D49";
+                        document.getElementById("btout1").style.background="transparent";
+                        document.getElementById("btout3").style.background="transparent";
+                    }
+                    function change3(){
+                        document.getElementById("btout3").style.background="#009688";
+                        document.getElementById("btout1").style.background="transparent";
+                        document.getElementById("btout2").style.background="transparent";
+                    }
+                </script>
+            </dl>
         </li>
         <li class="layui-nav-item">
             <a>

@@ -24,7 +24,14 @@
   </head>
   
   <body>
-    <div class="x-body">
+  <div class="x-nav">
+    <span class="layui-breadcrumb" style="visibility: visible;">
+        <a href="${ctx}/">首页</a><span lay-separator="">/</span>
+        <a href="">公告管理</a><span lay-separator="">/</span>
+        <a><cite>添加公告</cite></a>
+    </span>
+  </div>
+    <div class="x-body" style="padding: 50px 0 0 30px">
         <form class="layui-form" method="POST" id="deptForm"  action="${ctx}/notice/add">
         <input type="hidden" name="userid" id="userid" value="${user_session.id }" >
         <input type="hidden" name="id" id="id" value="${job.id }" >
@@ -34,7 +41,7 @@
               </label>
               <div class="layui-input-inline">
                   <input type="text" id="title" name="title" required="" lay-verify="required"
-                  autocomplete="off" class="layui-input" value="${job.title }">
+                  autocomplete="off" class="layui-input" value="${job.title }" >
               </div>
              
           </div>
@@ -50,7 +57,7 @@
           <div class="layui-form-item">
               <label for="L_repass" class="layui-form-label">
               </label>
-              <input type="submit" value=" 提交" class="layui-btn" lay-filter="add" lay-submit=""/>
+              <input type="submit" value=" 提交" class="layui-btn" lay-filter="add" lay-submit="">
                  
           </div>
       </form>

@@ -24,10 +24,33 @@
 </head>
 
 <body>
-<div class="x-body">
+<div class="x-nav">
+    <span class="layui-breadcrumb" style="visibility: visible;">
+        <a href="${ctx}/">首页</a><span lay-separator="">/</span>
+        <a href="">财务管理</a><span lay-separator="">/</span>
+        <a><cite>其他开支</cite></a>
+    </span>
+</div>
+<div class="x-body" style="padding: 50px 0 0 30px">
     <form class="layui-form" method="POST" id="deptForm"  action="${ctx}/finance/add">
-        价格<input type="text" name="count" id="count"><br>
-        信息<input type="text" name="info" id="info"><br>
+        <div class="layui-form-item" >
+            <label for="username" class="layui-form-label">
+                <span class="x-red">*</span>价格
+            </label>
+            <div class="layui-input-inline">
+                <input type="text" id="name" name="name" required="" lay-verify="required"
+                       autocomplete="off" class="layui-input"  style="width: 240%">
+            </div>
+        </div>
+            <div class="layui-form-item" >
+                <label for="username" class="layui-form-label">
+                    <span class="x-red">*</span>信息
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="name" name="name" required="" lay-verify="required"
+                           autocomplete="off" class="layui-input"  style="width: 240%">
+                </div>
+            </div>
         <div class="layui-form-item">
             <label for="L_repass" class="layui-form-label">
             </label>

@@ -70,6 +70,42 @@
                 </div>
             </div>
         </fieldset>
+        <br/>
+        <hr>
+        <br/>
+        <fieldset class="layui-elem-field">
+            <legend>财物部统计</legend>
+            <div class="layui-field-box">
+                <div class="layui-col-md12">
+                    <div class="layui-card">
+                        <div class="layui-card-body">
+                            <div class="layui-carousel x-admin-carousel x-admin-backlog" lay-anim="" lay-indicator="inside" lay-arrow="none" style="width: 100%; height: 90px;">
+                                <div carousel-item="">
+                                    <ul class="layui-row layui-col-space10 layui-this">
+                                        <li class="layui-col-xs2">
+                                            <a href="javascript:;" class="x-admin-backlog-body">
+                                                <h3>收入总计</h3>
+                                                <p>
+                                                    <i class="layui-icon" style="font-size: 30px;color: red">&#xe654;</i>
+                                                    <cite>${input}</cite></p>
+                                            </a>
+                                        </li>
+                                        <li class="layui-col-xs2">
+                                            <a href="javascript:;" class="x-admin-backlog-body">
+                                                <h3>支出总计</h3>
+                                                <p>
+                                                    <i style="font-size: 60px;color: green;float:left;margin:auto 10px auto 0px;">-</i>
+                                                    <cite>${-output}</cite></p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
         <p>input <cite>${input}</cite></p>
         <p>output <cite>${output}</cite></p>
         <p>numShort <cite>${numShort}</cite></p>
