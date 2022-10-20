@@ -37,4 +37,9 @@ public class NoticeServiceImpl implements NoticeService {
 //    noticeMapper.insert_Info(notice);
     noticeMapper.insert(notice);
   }
+
+  @Override
+  public Integer getCountNotice() {
+    return noticeMapper.get_List().size();
+  }
 }

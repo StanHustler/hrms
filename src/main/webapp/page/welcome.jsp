@@ -112,6 +112,7 @@
         <p>nameMostShort <cite>${nameMostShort}</cite></p>
         <p>getCountSale <cite>${getCountSale}</cite></p>
         <p>getCountPurchase <cite>${getCountPurchase}</cite></p>
+        <p>getCountNotice <cite>${getCountNotice}</cite></p>
     </div>
         <script type="text/javascript">
            var i=0;

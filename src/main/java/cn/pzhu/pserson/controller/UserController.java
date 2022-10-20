@@ -36,6 +36,8 @@ public class UserController {
   private SaleService saleService;
   @Autowired
   private PurchaseService purchaseService;
+  @Autowired
+  private NoticeService noticeService;
 
   // 如果在目录下输入为空，则跳转到指定链接
   @RequestMapping(value = "/user/")
@@ -74,6 +76,7 @@ public class UserController {
       session.setAttribute("nameMostShort",inventoryService.getNameMostShort());
       session.setAttribute("getCountSale",saleService.getCountSale());
       session.setAttribute("getCountPurchase",purchaseService.getCountPurchase());
+      session.setAttribute("getCountNotice",noticeService.getCountNotice());
       mv.setViewName("redirect:/index");
     } else {
       mv.addObject("message", "登录名或密码错误!请重新输入");
