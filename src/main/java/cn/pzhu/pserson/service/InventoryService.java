@@ -25,15 +25,7 @@ public class InventoryService {
         return inventoryMapper.selectByExample(example).size();
     }
 
-    public String getNameMostShort(){
-        InventoryExample example = new InventoryExample();
-        example.setOrderByClause("count ASC");
-        List<Inventory> list = inventoryMapper.selectByExample(example);
-        if (list.size() >0){
-            return list.get(0).getName();
-        }else {
-            return "无数据";
-        }
-
+    public Integer getCountInventory(){
+        return inventoryMapper.selectByExample(new InventoryExample()).size();
     }
 }

@@ -109,7 +109,7 @@
         <p>input <cite>${input}</cite></p>
         <p>output <cite>${output}</cite></p>
         <p>numShort <cite>${numShort}</cite></p>
-        <p>nameMostShort <cite>${nameMostShort}</cite></p>
+        <p>getCountInventory <cite>${getCountInventory}</cite></p>
         <p>getCountSale <cite>${getCountSale}</cite></p>
         <p>getCountPurchase <cite>${getCountPurchase}</cite></p>
         <p>getCountNotice <cite>${getCountNotice}</cite></p>

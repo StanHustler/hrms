@@ -73,7 +73,7 @@ public class UserController {
       session.setAttribute("input",financeService.getInput());
       session.setAttribute("output",financeService.getOutput());
       session.setAttribute("numShort",inventoryService.getNumShort());
-      session.setAttribute("nameMostShort",inventoryService.getNameMostShort());
+      session.setAttribute("getCountInventory",inventoryService.getCountInventory());
       session.setAttribute("getCountSale",saleService.getCountSale());
       session.setAttribute("getCountPurchase",purchaseService.getCountPurchase());
       session.setAttribute("getCountNotice",noticeService.getCountNotice());
