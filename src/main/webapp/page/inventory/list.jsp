@@ -51,10 +51,11 @@
                 <div class="layui-unselect header layui-form-checkbox" lay-skin="primary"><i class="layui-icon">&#xe605;</i></div>
             </th>
             <th>ID</th>
-            <th>name</th>
-            <th>count</th>
-            <th>in</th>
-            <th>out</th>
+            <th>商品名称</th>
+            <th>库存量</th>
+            <th>总入库量</th>
+            <th>总出库量</th>
+            <th>操作</th>
         </thead>
         <tbody>
         <c:forEach items="${requestScope.list}" var="dept" varStatus="stat">

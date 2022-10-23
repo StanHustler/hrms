@@ -39,14 +39,14 @@
                     <span class="x-red">*</span>职位名称
                 </label>
                 <input type="text" id="username" name="loginname"  required=""
-                       lay-verify="required" autocomplete="off" placeholder="请输入登录名" class="layui-input"
+                       lay-verify="required" autocomplete="off" placeholder="请输入职位名称" class="layui-input"
                        value="${job.name }" style="width:40%">
             </div>
             <div class="layui-form-item">
                 <label for="username" class="layui-form-label">
                     <span class="x-red">*</span>详细信息
                 </label>
-                <input type="text" name="username" required="" lay-verify="required" placeholder="请输入用户名"
+                <input type="text" name="username" required="" lay-verify="required" placeholder="请输入详细信息"
                        autocomplete="off" class="layui-input" value="${job.remark }" style="width: 40%">
             </div>
           <div class="layui-form-item">

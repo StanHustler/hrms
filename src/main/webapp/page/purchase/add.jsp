@@ -38,8 +38,8 @@
                 <span class="x-red">*</span>物品名称
             </label>
             <div class="layui-input-inline">
-                <input type="text" id="address" name="address" required="" lay-verify="required"
-                       autocomplete="off" class="layui-input" value="${job.address }" style="width: 240%">
+                <input type="text" id="name" name="name" required="" lay-verify="required"
+                       autocomplete="off" class="layui-input" style="width: 240%">
             </div>
         </div>
         <div class="layui-form-item">
@@ -47,8 +47,8 @@
                 <span class="x-red">*</span>数量
             </label>
             <div class="layui-input-inline">
-                <input type="text" id="address" name="address" required="" lay-verify="required"
-                       autocomplete="off" class="layui-input" value="${job.address }" style="width: 240%">
+                <input type="text" id="count" name="count" required="" lay-verify="required"
+                       autocomplete="off" class="layui-input" style="width: 240%">
             </div>
         </div>
         <div class="layui-form-item">
@@ -56,8 +56,8 @@
                 <span class="x-red">*</span>价格
             </label>
             <div class="layui-input-inline">
-                <input type="text" id="address" name="address" required="" lay-verify="required"
-                       autocomplete="off" class="layui-input" value="${job.address }" style="width: 240%">
+                <input type="text" id="money" name="money" required="" lay-verify="required"
+                       autocomplete="off" class="layui-input" style="width: 240%">
             </div>
         </div>
         <div class="layui-form-item">
@@ -65,8 +65,8 @@
                 <span class="x-red">*</span>签名
             </label>
             <div class="layui-input-inline">
-                <input type="text" id="address" name="address" required="" lay-verify="required"
-                       autocomplete="off" class="layui-input" value="${job.address }" style="width: 240%">
+                <input type="text" id="sign" name="sign" required="" lay-verify="required"
+                       autocomplete="off" class="layui-input" style="width: 240%">
             </div>
         </div>
 

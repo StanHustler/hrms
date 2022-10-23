@@ -20,10 +20,18 @@
     <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
     <script src="${ctx}/public/lib/layui/layui.js" charset="utf-8"></script>
     <script type="text/javascript" src="${ctx}/public/js/xadmin.js"></script>
+    <script src="https://at.alicdn.com/t/c/font_3720029_kifmdhm1s3d.js"></script>
+    <style type="text/css">
+        .icon {
+            width: 1.2em; height: 1.2em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+    </style>
     <style>
         .layui-nav-child{
             min-width: 200%;
-            min-height: 300%;
         }
         #btin{
             width: 38px;
@@ -48,7 +56,7 @@
 <body>
 <!-- 顶部开始 -->
 <div class="container">
-    <div class="logo"><a href="./index.html">人事管理系统</a></div>
+    <div class="logo"><a href="./index.html">企业ERP管理系统</a></div>
     <div class="left_open">
         <i title="展开左侧栏" class="iconfont">&#xe699;</i>
     </div>
@@ -59,7 +67,7 @@
                 <i class="layui-icon">&#xe66a;</i>
                 主题颜色
             </a>
-            <dl class="layui-nav-child">
+            <dl class="layui-nav-child" style="min-height: 300%;">
                             <div style="margin-top:30px;text-align: center;">
                                 <label style="color: black">Backgroud Color</label><br>
                                 <div class="out" id="btout1">
@@ -101,12 +109,15 @@
             <a>
                 <i class="layui-icon">&#xe667;</i>
                 消息通知
+                <span class="layui-badge layui-bg-gray" style="position: relative;top:2px;height:15px;width:4px;"><cite style="position:relative;top:-1px;left:-2.5px;">${getCountNotice}</cite></span>
             </a>
         </li>
         <li class="layui-nav-item">
             <a href="javascript:;">${user_session.username}</a>
             <dl class="layui-nav-child"> <!-- 二级菜单 -->
-                <dd><a href="./logout?username=${user_session.username}">退出</a></dd>
+                <dd><a href="./logout?username=${user_session.username}">个人信息</a></dd>
+                <dd><a href="./logout?username=${user_session.username}">修改密码</a></dd>
+                <dd><a href="./logout?username=${user_session.username}">退出系统</a></dd>
             </dl>
         </li>
     </ul>
@@ -121,7 +132,9 @@
             <c:if test="${user_session.level=='0'}">
                 <li>
                     <a href="javascript:;">
-                        <i class="iconfont">&#xe6b8;</i>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-yonghu"></use>
+                        </svg>
                         <cite>用户管理[管理员]</cite>
                         <i class="iconfont nav_right">&#xe697;</i>
                     </a>
@@ -145,7 +158,9 @@
             </c:if>
             <li>
                 <a href="javascript:;">
-                    <i class="iconfont">&#xe723;</i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-bumenguanli2"></use>
+                    </svg>
                     <cite>部门管理</cite>
                     <i class="iconfont nav_right">&#xe697;</i>
                 </a>
@@ -168,7 +183,9 @@
             </li>
             <li>
                 <a href="javascript:;">
-                    <i class="iconfont">&#xe723;</i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-zhiweimoban"></use>
+                    </svg>
                     <cite>职位管理</cite>
                     <i class="iconfont nav_right">&#xe697;</i>
                 </a>
@@ -190,7 +207,9 @@
 
             <li>
                 <a href="javascript:;">
-                    <i class="iconfont">&#xe726;</i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-yonghuguanli3"></use>
+                    </svg>
                     <cite>员工管理</cite>
                     <i class="iconfont nav_right">&#xe697;</i>
                 </a>
@@ -212,7 +231,9 @@
 
             <li>
                 <a href="javascript:;">
-                    <i class="iconfont">&#xe726;</i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qiyezhaopin"></use>
+                    </svg>
                     <cite>招聘管理</cite>
                     <i class="iconfont nav_right">&#xe697;</i>
                 </a>
@@ -234,7 +255,9 @@
 
             <li>
                 <a href="javascript:;">
-                    <i class="iconfont">&#xe6ce;</i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-navicon-gggl"></use>
+                    </svg>
                     <cite>公告管理</cite>
                     <i class="iconfont nav_right">&#xe697;</i>
                 </a>
@@ -251,34 +274,13 @@
                             <cite>添加公告</cite>
                         </a>
                     </li>
-
-
                 </ul>
             </li>
             <li>
                 <a href="javascript:;">
-                    <i class="iconfont">&#xe6b4;</i>
-                    <cite>下载中心</cite>
-                    <i class="iconfont nav_right">&#xe697;</i>
-                </a>
-                <ul class="sub-menu">
-                    <li>
-                        <a _href="${ctx }/document/list?pageNum=1&pageSize=6">
-                            <i class="iconfont">&#xe6a7;</i>
-                            <cite>文档查询</cite>
-                        </a>
-                    </li>
-                    <li>
-                        <a _href="${ctx }/document/add">
-                            <i class="iconfont">&#xe6a7;</i>
-                            <cite>上传文档</cite>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="javascript:;">
-                    <i class="layui-icon">&#xe716;</i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-caigouguanli-"></use>
+                    </svg>
                     <cite>采购管理</cite>
                     <i class="iconfont nav_right">&#xe697;</i>
                 </a>
@@ -299,7 +301,9 @@
             </li>
             <li>
                 <a href="javascript:;">
-                    <i class="layui-icon">&#xe716;</i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-cangkuguanli1"></use>
+                    </svg>
                     <cite>仓库管理</cite>
                     <i class="iconfont nav_right">&#xe697;</i>
                 </a>
@@ -314,29 +318,10 @@
             </li>
             <li>
                 <a href="javascript:;">
-                    <i class="layui-icon">&#xe716;</i>
-                    <cite>系统信息</cite>
-                    <i class="iconfont nav_right">&#xe697;</i>
-                </a>
-                <ul class="sub-menu">
-                    <li>
-                        <a _href="${ctx }/sysinfo">
-                            <i class="iconfont">&#xe6a7;</i>
-                            <cite>运行环境</cite>
-                        </a>
-                    </li>
-                    <li>
-                        <a _href="${ctx }/log">
-                            <i class="iconfont">&#xe6a7;</i>
-                            <cite>日志文件</cite>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="javascript:;">
-                    <i class="layui-icon">&#xe716;</i>
-                    <cite>销售</cite>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-xiaoshou-"></use>
+                    </svg>
+                    <cite>销售管理</cite>
                     <i class="iconfont nav_right">&#xe697;</i>
                 </a>
                 <ul class="sub-menu">
@@ -356,7 +341,9 @@
             </li>
             <li>
                 <a href="javascript:;">
-                    <i class="layui-icon">&#xe716;</i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-caiwuguanli"></use>
+                    </svg>
                     <cite>财务管理</cite>
                     <i class="iconfont nav_right">&#xe697;</i>
                 </a>
@@ -371,6 +358,29 @@
                         <a _href="${ctx}/finance/add">
                             <i class="iconfont">&#xe6a7;</i>
                             <cite>其他开支</cite>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-xitongxinxi"></use>
+                    </svg>
+                    <cite>系统信息</cite>
+                    <i class="iconfont nav_right">&#xe697;</i>
+                </a>
+                <ul class="sub-menu">
+                    <li>
+                        <a _href="${ctx }/sysinfo">
+                            <i class="iconfont">&#xe6a7;</i>
+                            <cite>运行环境</cite>
+                        </a>
+                    </li>
+                    <li>
+                        <a _href="${ctx }/log">
+                            <i class="iconfont">&#xe6a7;</i>
+                            <cite>日志文件</cite>
                         </a>
                     </li>
                 </ul>

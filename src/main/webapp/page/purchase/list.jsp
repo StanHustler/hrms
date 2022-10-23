@@ -57,10 +57,10 @@
                 <div class="layui-unselect header layui-form-checkbox" lay-skin="primary"><i class="layui-icon">&#xe605;</i></div>
             </th>
             <th>ID</th>
-            <th>部门名称</th>
-            <th>详细信息</th>
+            <th>商品名称</th>
+            <th>价格</th>
             <th>人数</th>
-            <!-- <th>状态</th> -->
+            <th>采购员</th>
             <th>操作</th>
         </thead>
         <tbody>
@@ -74,7 +74,6 @@
                 <td>${dept.count}</td>
                 <td>${dept.money}</td>
                 <td>${dept.sign}</td>
-                <td>${dept.time}</td>
 
                 <td class="td-manage">
                     <c:if test="${user_session.level=='0'}">

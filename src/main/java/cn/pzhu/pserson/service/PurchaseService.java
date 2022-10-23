@@ -33,7 +33,7 @@ public class PurchaseService {
         if (inventories.size() == 0){
             Inventory inventory = new Inventory();
             BeanUtils.copyProperties(purchase,inventory);
-            inventory.setInput(0);
+            inventory.setInput(purchase.getCount());
             inventory.setOutput(0);
             inventoryMapper.insertSelective(inventory);
         }else {
@@ -48,7 +48,7 @@ public class PurchaseService {
         Finance finance = new Finance();
         finance.setCount(purchase.getMoney()*-1);
         finance.setTime(purchase.getTime());
-        finance.setInfo("购买：" + purchase.getName()+"*"+purchase.getCount());
+        finance.setInfo("购买：" + purchase.getName()+"    *"+purchase.getCount());
         financeMapper.insert(finance);
     }
 

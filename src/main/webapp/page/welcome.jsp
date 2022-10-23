@@ -12,6 +12,16 @@
         <link rel="shortcut icon" href="${ctx}/public/logo.ico" type="image/x-icon" />
         <link rel="stylesheet" href="${ctx}/public/css/font.css">
         <link rel="stylesheet" href="${ctx}/public/css/xadmin.css">
+        <script src="https://at.alicdn.com/t/c/font_3720029_dp06f8ww7rt.js"></script>
+        <style type="text/css">
+            .icon {
+                width: 1em; height: 1em;
+                vertical-align: -0.15em;
+                fill: currentColor;
+                overflow: hidden;
+                font-size: 28px;
+            }
+        </style>
     </head>
     <body>
     <div class="x-body layui-anim layui-anim-up">
@@ -70,9 +80,7 @@
                 </div>
             </div>
         </fieldset>
-        <br/>
-        <hr>
-        <br/>
+
         <fieldset class="layui-elem-field">
             <legend>财物部统计</legend>
             <div class="layui-field-box">
@@ -85,17 +93,37 @@
                                         <li class="layui-col-xs2">
                                             <a href="javascript:;" class="x-admin-backlog-body">
                                                 <h3>收入总计</h3>
-                                                <p>
-                                                    <i class="layui-icon" style="font-size: 30px;color: red">&#xe654;</i>
-                                                    <cite>${input}</cite></p>
+                                                <p><cite>${input}</cite></p>
                                             </a>
                                         </li>
                                         <li class="layui-col-xs2">
                                             <a href="javascript:;" class="x-admin-backlog-body">
                                                 <h3>支出总计</h3>
-                                                <p>
-                                                    <i style="font-size: 60px;color: green;float:left;margin:auto 10px auto 0px;">-</i>
-                                                    <cite>${-output}</cite></p>
+                                                <p><cite>${-output}</cite></p>
+                                            </a>
+                                        </li>
+                                        <li class="layui-col-xs2">
+                                            <a href="javascript:;" class="x-admin-backlog-body">
+                                                <h3>销售成交量</h3>
+                                                <p><cite>${getCountSale}</cite></p>
+                                            </a>
+                                        </li>
+                                        <li class="layui-col-xs2">
+                                            <a href="javascript:;" class="x-admin-backlog-body">
+                                                <h3>采购成交量</h3>
+                                                <p><cite>${getCountPurchase}</cite></p>
+                                            </a>
+                                        </li>
+                                        <li class="layui-col-xs2">
+                                            <a href="javascript:;" class="x-admin-backlog-body">
+                                                <h3>短缺商品量</h3>
+                                                <p><cite>${numShort}</cite></p>
+                                            </a>
+                                        </li>
+                                        <li class="layui-col-xs2">
+                                            <a href="javascript:;" class="x-admin-backlog-body">
+                                                <h3>商品种类数量</h3>
+                                                <p><cite>${getCountInventory}</cite></p>
                                             </a>
                                         </li>
                                     </ul>
@@ -106,13 +134,20 @@
                 </div>
             </div>
         </fieldset>
-        <p>input <cite>${input}</cite></p>
-        <p>output <cite>${output}</cite></p>
-        <p>numShort <cite>${numShort}</cite></p>
-        <p>getCountInventory <cite>${getCountInventory}</cite></p>
-        <p>getCountSale <cite>${getCountSale}</cite></p>
-        <p>getCountPurchase <cite>${getCountPurchase}</cite></p>
-        <p>getCountNotice <cite>${getCountNotice}</cite></p>
+        <br/>
+        <fieldset class="layui-elem-field" style="display: inline-block;">
+            <legend>采购统计</legend>
+            <div class="layui-field-box">
+                <div id="main" style="height: 400px;width: 650px"></div>
+            </div>
+
+        </fieldset>
+        <fieldset class="layui-elem-field" style="display: inline-block;">
+                <legend>xx统计</legend>
+                <div class="layui-field-box" style="float: right;">
+                    <div id="pie" style="height: 400px;width: 650px"></div>
+                </div>
+        </fieldset>
     </div>
         <script type="text/javascript">
            var i=0;
@@ -131,4 +166,72 @@
   setInterval(myDate,1000);
         </script>
     </body>
+    <script src="https://cdn.bootcdn.net/ajax/libs/echarts/5.4.0/echarts.min.js"></script>
+    <script type="text/javascript">
+        var chartDom = document.getElementById('main');
+        var myChart = echarts.init(chartDom);
+        const option1 = {
+            xAxis: {
+                type: 'category',
+                data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+            },
+            yAxis: {
+                type: 'value'
+            },
+            series: [
+                {
+                    data: [120, 200, 150, 80, 70, 110, 130],
+                    type: 'bar'
+                }
+            ]
+        };
+        myChart.setOption(option1);
+    </script>
+    <script type="text/javascript">
+        var chartDom = document.getElementById('pie');
+        var myChart = echarts.init(chartDom);
+        const option = {
+            tooltip: {
+                trigger: 'item'
+            },
+            legend: {
+                top: 'bottom',
+                left: 'center'
+            },
+            series: [
+                {
+                    type: 'pie',
+                    radius: ['40%', '70%'],
+                    avoidLabelOverlap: false,
+                    itemStyle: {
+                        borderRadius: 10,
+                        borderColor: '#fff',
+                        borderWidth: 2
+                    },
+                    label: {
+                        show: false,
+                        position: 'center'
+                    },
+                    emphasis: {
+                        label: {
+                            show: true,
+                            fontSize: '40',
+                            fontWeight: 'bold'
+                        }
+                    },
+                    labelLine: {
+                        show: false
+                    },
+                    data: [
+                        { value: 1048, name: 'Search Engine' },
+                        { value: 735, name: 'Direct' },
+                        { value: 580, name: 'Email' },
+                        { value: 484, name: 'Union Ads' },
+                        { value: 300, name: 'Video Ads' }
+                    ]
+                }
+            ]
+        };
+        myChart.setOption(option);
+    </script>
 </html>
