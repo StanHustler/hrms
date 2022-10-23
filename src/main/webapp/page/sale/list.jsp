@@ -35,8 +35,8 @@
 <div class="x-body">
     <div class="layui-row" style="" align="center">
         <form class="layui-form layui-col-md12 x-so" method="get" action="${ctx }/dept/list">
-            <!-- <input class="layui-input" placeholder="开始日" name="start" id="start">
-            <input class="layui-input" placeholder="截止日" name="end" id="end"> -->
+            <input class="layui-input" placeholder="开始日" name="start" id="start">
+            <input class="layui-input" placeholder="截止日" name="end" id="end">
             <input type="text" name="content" style="width:50%;"  placeholder="请输入查找内容" autocomplete="off" class="layui-input">
             <input type="hidden" name="pageNum" value="1"/>
             <input type="hidden" name="pageSize" value="6"/>
@@ -98,14 +98,7 @@
     <div class="page">
         <div>
             <a class="prev" href="">&lt;&lt;</a>
-            <c:if test="${pageInfo.pageNum-1 != 0 }">
-                <a class="num" href="../dept/list?pageNum=${pageInfo.pageNum-1}&pageSize=6">${pageInfo.pageNum - 1}</a>
-            </c:if>
-            <span class="current">${pageInfo.pageNum}</span>
-            <c:if test="${pageInfo.pageNum + 1  <= pageInfo.pages }">
-                <a class="num" href="../dept/list?pageNum=${pageInfo.pageNum+1}&pageSize=6">${pageInfo.pageNum + 1}</a>
-            </c:if>
-            <!-- <a class="num" href="">489</a> -->
+            <span class="current">1</span>
             <a class="next" href="">&gt;&gt;</a>
         </div>
     </div>

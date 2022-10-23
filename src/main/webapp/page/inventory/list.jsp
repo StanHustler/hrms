@@ -99,14 +99,7 @@
     <div class="page">
         <div>
             <a class="prev" href="">&lt;&lt;</a>
-            <c:if test="${pageInfo.pageNum-1 != 0 }">
-                <a class="num" href="../dept/list?pageNum=${pageInfo.pageNum-1}&pageSize=6">${pageInfo.pageNum - 1}</a>
-            </c:if>
-            <span class="current">${pageInfo.pageNum}</span>
-            <c:if test="${pageInfo.pageNum + 1  <= pageInfo.pages }">
-                <a class="num" href="../dept/list?pageNum=${pageInfo.pageNum+1}&pageSize=6">${pageInfo.pageNum + 1}</a>
-            </c:if>
-            <!-- <a class="num" href="">489</a> -->
+            <span class="current">1</span>
             <a class="next" href="">&gt;&gt;</a>
         </div>
     </div>

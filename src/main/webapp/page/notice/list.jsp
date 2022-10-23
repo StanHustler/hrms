@@ -29,15 +29,12 @@
         <a href="">首页</a>
         <a><cite>公告查询</cite></a>
       </span>
-      <button type="button" onclick="location.href='${ctx}/document/add'" class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:innert;margin-left:75%;;"  ><i class="layui-icon"></i>增加</button>
-      <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right" href="${ctx }/notice/list?pageNum=${pageInfo.pageNum}&pageSize=6" title="刷新">
-        <i class="layui-icon" style="line-height:30px">ဂ</i></a>
     </div>
     <div class="x-body">
       <div class="layui-row" style="" align="center">
         <form class="layui-form layui-col-md12 x-so" method="get" action="${ctx }/notice/list">
-          <!-- <input class="layui-input" placeholder="开始日" name="start" id="start">
-          <input class="layui-input" placeholder="截止日" name="end" id="end"> -->
+          <input class="layui-input" placeholder="开始日" name="start" id="start">
+          <input class="layui-input" placeholder="截止日" name="end" id="end">
           <input type="text" name="content" style="width:50%;"  placeholder="请输入查找内容" autocomplete="off" class="layui-input">
           <input type="hidden" name="pageNum" value="1"/>
           <input type="hidden" name="pageSize" value="6"/>
