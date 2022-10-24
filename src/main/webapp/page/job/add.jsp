@@ -38,15 +38,16 @@
                 <label for="username" class="layui-form-label">
                     <span class="x-red">*</span>职位名称
                 </label>
-                <input type="text" id="username" name="loginname"  required=""
+                <input type="text" id="name" name="name"  required=""
                        lay-verify="required" autocomplete="off" placeholder="请输入职位名称" class="layui-input"
                        value="${job.name }" style="width:40%">
             </div>
             <div class="layui-form-item">
-                <label for="username" class="layui-form-label">
+                <label for="phone" class="layui-form-label">
                     <span class="x-red">*</span>详细信息
                 </label>
-                <input type="text" name="username" required="" lay-verify="required" placeholder="请输入详细信息"
+                <input type="text" name="remark" id="remark" required=""
+                       lay-verify="required" placeholder="请输入详细信息"
                        autocomplete="off" class="layui-input" value="${job.remark }" style="width: 40%">
             </div>
           <div class="layui-form-item">
@@ -70,60 +71,60 @@
           </div>
       </form>
     </div>
-    <script>
-        layui.use(['form','layer'], function(){
-            $ = layui.jquery;
+  <script>
+      layui.use(['form','layer'], function(){
+          $ = layui.jquery;
           var form = layui.form
-          ,layer = layui.layer;
-        
+              ,layer = layui.layer;
+
           //自定义验证规则
           form.verify({
-            nikename: function(value){
-              if(value.length < 5){
-                return '昵称至少得5个字符啊';
+              nikename: function(value){
+                  if(value.length < 5){
+                      return '昵称至少得5个字符啊';
+                  }
               }
-            }
-            ,pass: [/(.+){6,12}$/, '密码必须6到12位']
-            ,repass: function(value){
-                if($('#L_pass').val()!=$('#L_repass').val()){
-                    return '两次密码不一致';
-                }
-            }
+              ,pass: [/(.+){6,12}$/, '密码必须6到12位']
+              ,repass: function(value){
+                  if($('#L_pass').val()!=$('#L_repass').val()){
+                      return '两次密码不一致';
+                  }
+              }
           });
 
           //监听提交
           form.on('submit(add)', function(data){
-        	  
-            console.log(data);
-            //发异步，把数据提交给php
-            var id = document.getElementById("id").value;
-            console.log(id);
-            if (id === null || id === '') {
-                layer.alert("增加成功", {icon: 6},function () {
-            	document.getElementById('deptForm').submit();
-                // 获得frame索引
-                var index = parent.layer.getFrameIndex(window.name);
-                //关闭当前frame
-                parent.layer.close(index);
-               
-            });
-            } else{
-                layer.alert("修改成功", {icon: 6},function () {
-            	document.getElementById('deptForm').submit();
-                // 获得frame索引
-                var index = parent.layer.getFrameIndex(window.name);
-                //关闭当前frame
-                parent.layer.close(index);
-            });
-            }
 
-           
-            return false;
+              console.log(data);
+              //发异步，把数据提交给php
+              var id = document.getElementById("id").value;
+              console.log(id);
+              if (id === null || id === '') {
+                  layer.alert("增加成功", {icon: 6},function () {
+                      document.getElementById('deptForm').submit();
+                      // 获得frame索引
+                      var index = parent.layer.getFrameIndex(window.name);
+                      //关闭当前frame
+                      parent.layer.close(index);
+
+                  });
+              } else{
+                  layer.alert("修改成功", {icon: 6},function () {
+                      document.getElementById('deptForm').submit();
+                      // 获得frame索引
+                      var index = parent.layer.getFrameIndex(window.name);
+                      //关闭当前frame
+                      parent.layer.close(index);
+                  });
+              }
+
+
+              return false;
           });
-          
-          
-        });
-    </script>
+
+
+      });
+  </script>
     
   </body>
 

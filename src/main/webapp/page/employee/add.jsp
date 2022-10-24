@@ -33,6 +33,7 @@
   </div>
     <div class="x-body" style="padding: 50px 0 0 30px">
         <form class="layui-form" method="POST" id="deptForm"  action="${ctx}/employee/add">
+          <input type="hidden" name="id" id="id" value="${job.id }" >
           <div class="layui-form-item" >
               <label for="username" class="layui-form-label">
                   <span class="x-red">*</span>姓名
@@ -48,8 +49,8 @@
                   <span class="x-red">*</span>身份证号码
               </label>
               <div class="layui-input-inline">
-                  <input type="text" id="name" name="name" required="" lay-verify="required"
-                         autocomplete="off" class="layui-input" value="${job.name }" style="width: 240%">
+                  <input type="text" id="cardId" name="cardId" required="" lay-verify="required"
+                         autocomplete="off" class="layui-input" value="${job.cardId}" style="width: 240%">
               </div>
           </div>
            <div class="layui-form-item">
@@ -57,8 +58,8 @@
                   <span class="x-red">*</span>性别
               </label>
               <div class="layui-input-inline">
-                  <input type="text" id="name" name="name" required="" lay-verify="required"
-                         autocomplete="off" class="layui-input" value="${job.name }" style="width: 240%">
+                  <input type="text" id="sex" name="sex" required="" lay-verify="required"
+                         autocomplete="off" class="layui-input" value="${job.sex }" style="width: 240%">
               </div>
           </div>
            <div class="layui-form-item">
