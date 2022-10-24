@@ -25,7 +25,7 @@ public class PurchaseController {
     public String purchaseAddBack(@ModelAttribute Purchase purchase){
         purchase.setTime(String.valueOf(System.currentTimeMillis()));
         purchaseService.insert(purchase);
-        return "ok";
+        return "redirect:/purchase/list";
     }
 
     @GetMapping("/purchase/list")

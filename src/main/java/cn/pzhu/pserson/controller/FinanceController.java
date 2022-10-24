@@ -1,7 +1,6 @@
 package cn.pzhu.pserson.controller;
 
 import cn.pzhu.pserson.domain.Finance;
-import cn.pzhu.pserson.domain.Purchase;
 import cn.pzhu.pserson.service.FinanceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -26,7 +25,7 @@ public class FinanceController {
     public String purchaseAddBack(@ModelAttribute Finance finance){
         finance.setTime(String.valueOf(System.currentTimeMillis()));
         financeService.insert(finance);
-        return "ok";
+        return "redirect:/finance/list";
     }
 
     @GetMapping("/finance/list")

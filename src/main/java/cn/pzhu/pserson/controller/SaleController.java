@@ -34,6 +34,6 @@ public class SaleController {
     public String purchaseAddBack(@ModelAttribute Sale sale){
         sale.setTime(String.valueOf(System.currentTimeMillis()));
         saleService.insert(sale);
-        return "sale/list";
+        return "redirect:/sale/list";
     }
 }
