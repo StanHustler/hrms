@@ -52,8 +52,8 @@
         </table>-->
 
 <!--        <table tableName="purchase" domainObjectName="Purchase"></table>-->
-<!--        <table tableName="inventory" domainObjectName="Inventory"></table>-->
-<!--        <table tableName="sale" domainObjectName="Sale" ></table>-->
-        <table tableName="finance" domainObjectName="Finance" ></table>
+        <table tableName="inventory" domainObjectName="Inventory"></table>
+        <table tableName="sale" domainObjectName="Sale" ></table>
+<!--        <table tableName="finance" domainObjectName="Finance" ></table>-->
     </context>
 </generatorConfiguration>

@@ -60,7 +60,7 @@
             <th>部门名称</th>
             <th>详细信息</th>
             <th>人数</th>
-            <!-- <th>状态</th> -->
+            <th>销售时间</th>
             <th>操作</th>
         </thead>
         <tbody>
