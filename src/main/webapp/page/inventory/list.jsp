@@ -30,6 +30,8 @@
         <a href="">仓库管理</a><span lay-separator="">/</span>
         <a><cite>仓库清单</cite></a>
     </span>
+    <a class="layui-btn layui-btn-small" style="line-height:1.6em;float:right;background-color: transparent;" href="${ctx }/job/list?pageNum=${inventory.pageNum}&pageSize=6" title="刷新">
+        <i class="layui-icon" style="line-height:40px;color:#929292">ဂ</i></a>
 </div>
 
 <div class="x-body">

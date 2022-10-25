@@ -29,6 +29,8 @@
         <a href="">首页</a>
         <a><cite>公告查询</cite></a>
       </span>
+        <a class="layui-btn layui-btn-small" style="line-height:1.6em;float:right;background-color: transparent;" href="${ctx }/notice/list?pageNum=${pageInfo.pageNum}&pageSize=6" title="刷新">
+            <i class="layui-icon" style="line-height:40px;color:#929292">ဂ</i></a>
     </div>
     <div class="x-body">
       <div class="layui-row" style="" align="center">
@@ -73,24 +75,20 @@
             
            <!--  <td class="td-status">
               <span class="layui-btn layui-btn-normal layui-btn-mini">已启用</span></td> -->
-            <td class="td-manage">
-             <!--  <a onclick="member_stop(this,'10001')" href="javascript:;"  title="启用">
-                <i class="layui-icon">&#xe601;</i>
-              </a> -->
-              <%-- <a title="编辑"  onclick="x_admin_show('编辑','${ctx}/notice/add?id=${dept.id }');" href="javascript:;"> --%>
-              <c:if test="${userid==dept.userId}">
-                <a title="编辑"  href="${ctx}/notice/add?id=${dept.id }">
-                <i class="layui-icon">&#xe642;</i>
-              </a>
-              <a title="删除" onclick="member_del(this,'${dept.id }')" href="javascript:;">
-                <i class="layui-icon">&#xe640;</i>
-              </a>
-            </c:if>
-              
-            </td>
-          </tr>
-				
-			</c:forEach>
+         <td class="td-manage">
+             <c:if test="${user_session.level=='0'}">
+                 <a title="编辑"  onclick="x_admin_show('编辑','${ctx}/dept/add?id=${dept.id }');" href="javascript:;">
+                     <i class="layui-icon">&#xe642;</i>
+                 </a>
+
+                 <a title="删除" onclick="member_del(this,'${dept.id }')" href="javascript:;">
+                     <i class="layui-icon">&#xe640;</i>
+                 </a>
+             </c:if>
+         </td>
+     </tr>
+
+        </c:forEach>
         
           
           
@@ -107,7 +105,7 @@
           <a class="next" href="">&gt;&gt;</a>
         </div> -->
         <div>
-          <a class="prev" href="">&lt;&lt;</a>
+          <a class="prev" href="">&lt;&lt;&lt;</a>
           <c:if test="${pageInfo.pageNum-1 != 0 }">
                 <a class="num" href="../notice/list?pageNum=${pageInfo.pageNum-1}&pageSize=6">${pageInfo.pageNum - 1}</a>
             </c:if>

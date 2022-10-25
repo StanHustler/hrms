@@ -30,6 +30,8 @@
         <a href="">销售</a><span lay-separator="">/</span>
         <a><cite>销售列表</cite></a>
     </span>
+    <a class="layui-btn layui-btn-small" style="line-height:1.6em;float:right;background-color: transparent;" href="../sale/list?pageNum=1&pageSize=6" title="刷新">
+        <i class="layui-icon" style="line-height:40px;color:#929292">ဂ</i></a>
 </div>
 
 <div class="x-body">
@@ -60,6 +62,7 @@
             <th>部门名称</th>
             <th>详细信息</th>
             <th>人数</th>
+            <th>单据时间</th>>
             <!-- <th>状态</th> -->
             <th>操作</th>
         </thead>
@@ -74,7 +77,6 @@
                 <td>${dept.count}</td>
                 <td>${dept.money}</td>
                 <td>${dept.time}</td>
-
                 <td class="td-manage">
                     <c:if test="${user_session.level=='0'}">
                         <a title="编辑"  onclick="x_admin_show('编辑','${ctx}/dept/add?id=${dept.id }');" href="javascript:;">

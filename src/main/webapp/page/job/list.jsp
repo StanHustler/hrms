@@ -30,8 +30,8 @@
         <a>
           <cite>职位信息</cite></a>
       </span>
-      <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right" href="${ctx }/job/list?pageNum=${pageInfo.pageNum}&pageSize=6" title="刷新">
-        <i class="layui-icon" style="line-height:30px">ဂ</i></a>
+      <a class="layui-btn layui-btn-small" style="line-height:1.6em;float:right;background-color: transparent;" href="${ctx }/job/list?pageNum=${pageInfo.pageNum}&pageSize=6" title="刷新">
+        <i class="layui-icon" style="line-height:40px;color:#929292">ဂ</i></a>
     </div>
     <div class="x-body">
       <div class="layui-row" style="" align="center">
