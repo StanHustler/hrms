@@ -1,6 +1,5 @@
 package cn.pzhu.pserson.controller;
 
-import cn.pzhu.pserson.domain.Purchase;
 import cn.pzhu.pserson.domain.Sale;
 import cn.pzhu.pserson.service.SaleService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 @Controller
@@ -32,7 +33,9 @@ public class SaleController {
 
     @PostMapping("/sale/add")
     public String purchaseAddBack(@ModelAttribute Sale sale){
-        sale.setTime(String.valueOf(System.currentTimeMillis()));
+        Date millisecondDate= new Date(System.currentTimeMillis());
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        sale.setTime(formatter.format(millisecondDate));
         saleService.insert(sale);
         return "redirect:/sale/list";
     }

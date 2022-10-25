@@ -8,7 +8,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 @Controller
@@ -23,7 +24,9 @@ public class FinanceController {
 
     @PostMapping("/finance/add")
     public String purchaseAddBack(@ModelAttribute Finance finance){
-        finance.setTime(String.valueOf(System.currentTimeMillis()));
+        Date millisecondDate= new Date(System.currentTimeMillis());
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        finance.setTime(formatter.format(millisecondDate));
         financeService.insert(finance);
         return "redirect:/finance/list";
     }

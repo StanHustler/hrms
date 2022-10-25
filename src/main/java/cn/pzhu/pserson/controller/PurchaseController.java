@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 @Controller
@@ -23,7 +25,10 @@ public class PurchaseController {
 
     @PostMapping("/purchase/add")
     public String purchaseAddBack(@ModelAttribute Purchase purchase){
-        purchase.setTime(String.valueOf(System.currentTimeMillis()));
+
+        Date millisecondDate= new Date(System.currentTimeMillis());
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        purchase.setTime(formatter.format(millisecondDate));
         purchaseService.insert(purchase);
         return "redirect:/purchase/list";
     }

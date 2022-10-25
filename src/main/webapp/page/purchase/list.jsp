@@ -63,6 +63,7 @@
             <th>价格</th>
             <th>人数</th>
             <th>采购员</th>
+            <th>采购日期</th>
             <th>操作</th>
         </thead>
         <tbody>
@@ -76,6 +77,7 @@
                 <td>${dept.count}</td>
                 <td>${dept.money}</td>
                 <td>${dept.sign}</td>
+                <td>${dept.time}</td>
 
                 <td class="td-manage">
                     <c:if test="${user_session.level=='0'}">

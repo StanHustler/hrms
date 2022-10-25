@@ -61,6 +61,7 @@
             <th>ID</th>
             <th>收支</th>
             <th>详细信息</th>
+            <th>时间</th>
             <th>操作</th>
         </thead>
         <tbody>
@@ -72,6 +73,7 @@
                 <td>${dept.id}</td>
                 <td>${dept.count}</td>
                 <td>${dept.info}</td>
+                <td>${dept.time}</td>
 
 
                 <td class="td-manage">
