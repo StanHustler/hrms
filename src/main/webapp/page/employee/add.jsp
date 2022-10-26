@@ -21,6 +21,11 @@
       <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
       <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+      <style>
+          .layui-form-select dl dd.layui-this{
+              background-color: #1890ff;
+          }
+      </style>
   </head>
   
   <body>
@@ -104,6 +109,7 @@
               </label>
               <div class="layui-input-inline">
                   <select id="job_id" name="jobId" class="valid" >
+                      <option value="">请选择职位</option>
                     <c:forEach items="${requestScope.job_list}" var="line" varStatus="stat">
                     <option value="${line.id}" <c:if test="${job.jobId == line.id }">selected</c:if>>${line.name}</option>
                     </c:forEach>
@@ -116,6 +122,7 @@
               </label>
               <div class="layui-input-inline">
                   <select id="dept_id" name="deptId" class="valid">
+                      <option value="">请选择部门</option>
                     <c:forEach items="${requestScope.dept_list}" var="line" varStatus="stat">
                     <option value="${line.id}" <c:if test="${job.deptId == line.id }">selected</c:if>>${line.name}</option>
                     </c:forEach>

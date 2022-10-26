@@ -28,8 +28,6 @@
             fill: currentColor;
             overflow: hidden;
         }
-    </style>
-    <style>
         .layui-nav-child{
             min-width: 200%;
         }
@@ -39,7 +37,7 @@
             box-sizing: border-box;
             display: block;
             margin: 2px auto 0px;
-            background-color:#FFB800;
+            background-color:#1890ff;
             border: 2px solid #fff;
         }
         .out{
@@ -55,7 +53,7 @@
 </head>
 <body>
 <!-- 顶部开始 -->
-<div class="container">
+<div class="container" id="nav">
     <div class="logo"><a href="./index.html">企业ERP管理系统</a></div>
     <div class="left_open">
         <i title="展开左侧栏" class="iconfont">&#xe699;</i>
@@ -68,10 +66,15 @@
                 主题颜色
             </a>
             <dl class="layui-nav-child" style="min-height: 300%;">
-                            <div style="margin-top:30px;text-align: center;">
+                            <div style="margin-top:10px;text-align: center;">
                                 <label style="color: black">Backgroud Color</label><br>
+                                <div class="out" id="btout" style="background-color:#1890ff">
+                                    <div id="btin" onclick="change()">
+                                        <button></button>
+                                    </div>
+                                </div>
                                 <div class="out" id="btout1">
-                                    <div id="btin" onclick="change1()" >
+                                    <div id="btin" onclick="change1()" style="background-color:#FFB800">
                                         <button ></button>
                                     </div>
                                 </div>
@@ -86,23 +89,6 @@
                                     </div>
                                 </div>
                             </div>
-                <script>
-                    function change1(){
-                      document.getElementById("btout1").style.background="#FFB800";
-                        document.getElementById("btout2").style.background="transparent";
-                        document.getElementById("btout3").style.background="transparent";
-                    }
-                    function change2(){
-                        document.getElementById("btout2").style.background="#393D49";
-                        document.getElementById("btout1").style.background="transparent";
-                        document.getElementById("btout3").style.background="transparent";
-                    }
-                    function change3(){
-                        document.getElementById("btout3").style.background="#009688";
-                        document.getElementById("btout1").style.background="transparent";
-                        document.getElementById("btout2").style.background="transparent";
-                    }
-                </script>
             </dl>
         </li>
         <li class="layui-nav-item">
@@ -414,4 +400,34 @@
 <!-- 底部结束 -->
 
 </body>
+<script>
+    function change(){
+        document.getElementById("btout").style.background="#1890ff";
+        document.getElementById("btout1").style.background="transparent";
+        document.getElementById("btout2").style.background="transparent";
+        document.getElementById("btout3").style.background="transparent";
+        document.getElementById("nav").style.background="#1890ff";
+    }
+    function change1(){
+        document.getElementById("btout1").style.background="#FFB800";
+        document.getElementById("btout2").style.background="transparent";
+        document.getElementById("btout3").style.background="transparent";
+        document.getElementById("btout").style.background="transparent";
+        document.getElementById("nav").style.background="#FFB800";
+    }
+    function change2(){
+        document.getElementById("btout2").style.background="#393D49";
+        document.getElementById("btout").style.background="transparent";
+        document.getElementById("btout1").style.background="transparent";
+        document.getElementById("btout3").style.background="transparent";
+        document.getElementById("nav").style.background="#393D49";
+    }
+    function change3(){
+        document.getElementById("btout3").style.background="#009688";
+        document.getElementById("btout").style.background="transparent";
+        document.getElementById("btout1").style.background="transparent";
+        document.getElementById("btout2").style.background="transparent";
+        document.getElementById("nav").style.background="#009688";
+    }
+</script>
 </html>

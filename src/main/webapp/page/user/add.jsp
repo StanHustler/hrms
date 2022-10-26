@@ -33,6 +33,9 @@
         .layui-form-checked span, .layui-form-checked:hover span {
             background-color: #1890ff;
         }
+        .layui-form-select dl dd.layui-this{
+            background-color: #1890ff;
+        }
     </style>
 </head>
 
@@ -76,8 +79,9 @@
             </label>
             <div class="layui-input-inline">
                 <select name="level" lay-verify="required" lay-search="">
-                    <option value="0">主管</option>
-                    <option value="1">人事</option>
+                    <option value="">请选择用户组</option>
+                    <option value="1">主管</option>
+                    <option value="2">人事</option>
                 </select>
             </div>
         </div>

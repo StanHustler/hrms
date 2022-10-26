@@ -21,6 +21,31 @@
       <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
       <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+      <style>
+          .insearch{
+              width: 50%;
+              position: relative;
+              height: 38px;
+              line-height: 1.3;
+              line-height: 38px\9;
+              background-color: #fff;
+              border: 1px solid #e6e6e6;
+              border-radius: 2px;
+              display: inline-block;
+              margin-bottom: -16px;
+          }
+          #search{
+              width:90%;
+              float: left;
+              border: none;
+          }
+          .insearch>button {
+              float: right;
+              height: 100%;
+              background-color: transparent;
+          }
+
+      </style>
   </head>
   
   <body>
@@ -37,10 +62,14 @@
         <form class="layui-form layui-col-md12 x-so" method="get" action="${ctx }/notice/list">
           <input class="layui-input" placeholder="开始日" name="start" id="start">
           <input class="layui-input" placeholder="截止日" name="end" id="end">
-          <input type="text" name="content" style="width:50%;"  placeholder="请输入查找内容" autocomplete="off" class="layui-input">
-          <input type="hidden" name="pageNum" value="1"/>
-          <input type="hidden" name="pageSize" value="6"/>
-          <button class="layui-btn"  lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i></button>
+            <div class="insearch">
+                <input type="text"  id="search" name="content"  placeholder="请输入查找内容" autocomplete="off" class="layui-input"/>
+                <button class="layui-btn"  lay-submit="" lay-filter="sreach">
+                    <i class="layui-icon" style="color: #777777;" >&#xe615;</i>
+                </button>
+                <input type="hidden" name="pageNum" value="1"/>
+                <input type="hidden" name="pageSize" value="6"/>
+            </div>
         </form>
       </div>
       <%-- <xblock>
