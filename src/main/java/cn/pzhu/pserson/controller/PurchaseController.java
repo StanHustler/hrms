@@ -1,20 +1,19 @@
 package cn.pzhu.pserson.controller;
 
 import cn.pzhu.pserson.domain.Purchase;
-import cn.pzhu.pserson.domain.response.BarDTO;
 import cn.pzhu.pserson.service.PurchaseService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
-@RestController
+@Controller
 public class PurchaseController {
     @Autowired
     private PurchaseService purchaseService;
@@ -39,10 +38,5 @@ public class PurchaseController {
         List<Purchase> list = purchaseService.getPurchase();
         model.addAttribute("list",list);
         return "purchase/list";
-    }
-
-    @PostMapping("/purchase/api/recent")
-    public BarDTO a(){
-        return purchaseService.getRecent();
     }
 }
