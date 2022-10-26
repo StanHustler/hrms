@@ -145,14 +145,18 @@
     <fieldset class="layui-elem-field" style="display: inline-block;">
         <legend>采购统计</legend>
         <div class="layui-field-box">
-            <div id="main" style="height: 400px;width: 650px"></div>
+            <div class="layui-col-md6">
+                <div id="main" style="height: 400px;width: 650px"></div>
+            </div>
         </div>
 
     </fieldset>
     <fieldset class="layui-elem-field" style="display: inline-block;">
         <legend>xx统计</legend>
         <div class="layui-field-box" style="float: right;">
-            <div id="pie" style="height: 400px;width: 650px"></div>
+            <div class="layui-col-md6">
+                <div id="pie" style="height: 400px;width: 650px"></div>
+            </div>
         </div>
     </fieldset>
 </div>
