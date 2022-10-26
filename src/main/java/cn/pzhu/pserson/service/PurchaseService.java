@@ -4,10 +4,14 @@ import cn.pzhu.pserson.dao.dao.FinanceMapper;
 import cn.pzhu.pserson.dao.dao.InventoryMapper;
 import cn.pzhu.pserson.dao.dao.PurchaseMapper;
 import cn.pzhu.pserson.domain.*;
+import cn.pzhu.pserson.domain.response.BarDTO;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -58,5 +62,33 @@ public class PurchaseService {
 
     public Integer getCountPurchase(){
         return purchaseMapper.selectByExample(new PurchaseExample()).size();
+    }
+
+    public BarDTO getRecent() {
+        BarDTO res = new BarDTO();
+        List<String> day = new ArrayList<>();
+        List<Integer> count = new ArrayList<>();
+
+        SimpleDateFormat formatter = new SimpleDateFormat("MM-dd");
+        SimpleDateFormat formatterDB = new SimpleDateFormat("yyyy-MM-dd");
+        long nowStamp = System.currentTimeMillis() - 86400000*6;
+
+        for (int i=0;i<7;i++){
+            // day
+            day.add(formatter.format(new Date(nowStamp)));
+            // count
+            PurchaseExample example = new PurchaseExample();
+            example.createCriteria().andTimeLike("%"+formatterDB.format(new Date(nowStamp))+"%");
+            List<Purchase> purchases = purchaseMapper.selectByExample(example);
+            Integer tmp=0;
+            for (Purchase purchase:purchases){
+                tmp += purchase.getMoney();
+            }
+            count.add(tmp);
+            nowStamp += 86400000;
+        }
+        res.setCount(count);
+        res.setDay(day);
+        return res;
     }
 }
