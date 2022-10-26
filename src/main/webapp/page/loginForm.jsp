@@ -17,36 +17,84 @@
     <script src="${ctx}/public/lib/layui/layui.js" charset="utf-8"></script>
     <script type="text/javascript" src="${ctx}/public/js/xadmin.js"></script>
     <style>
-        *{
-            margin:0;
-            padding:0;
-            text-decoration: none;
-            font-family: monospace;
-            box-sizing: border-box;
-        }
         body{
-            min-height: 100vh;
-            height:100%;
-            width:100%;
-            overflow: hidden;
-        }
-        .login-form{
-            width: 360px;
-            background: white;
-            height: 500px;
-            padding: 80px 40px;
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background: url(images/beijing.jpg)  no-repeat center 0px;
+            background-size: cover;
 
-            position: relative;
-            left:80%;
-            top: -150%;
-            transform: translate(-50%,-150%);
+            background-position: center 0;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            -webkit-background-size: cover;
+            -o-background-size: cover;
+            -moz-background-size: cover;
+            -ms-background-size: cover;
+
         }
-        .login-form h1{
-            text-align: left;
-            margin-bottom: 60px;
-            color: #1890ff;
+        .login-box{
+            position: absolute;
+            top: 50%;
+            left: 80%;
+            transform: translate(-50%,-50%);
+            width: 360px;
+            height: 500px;
+            padding:40px;
+
+            background: white;
+            box-sizing: border-box;
+
+        }
+        .login-box h1{
             font-size: 26px;
-            font-family: "Microsoft YaHei";
+            text-align: left;
+            color: #1890ff;
+            margin-bottom: 40px;
+            margin-top: 35px;
+        }
+        .login-box .login-field{
+            position: relative;
+        }
+        .login-box .login-field  input{
+            width: 100%;
+            padding: 10px 0;
+            font-size: 16px;
+            color: #fff;
+            margin-bottom: 30px;
+            border: none;
+            border-bottom: 1px solid #fff;
+            outline: none;
+            background: transparent;
+        }
+        .login-box .login-field  label{
+            position: absolute;
+            top: 0;
+            left: 0;
+            letter-spacing: 1px;
+            padding: 10px 0;
+            font-size: 16px;
+            color: #fff;
+            pointer-events: none;
+            transition: .5s;
+        }
+        .login-box .login-field input:focus ~ label,
+        .login-box .login-field input:valid ~ label{
+            top: -23px;
+            left: 0;
+            color: aqua;
+            font-size: 12px;
+        }
+        .login-box .logbtn{
+            width: 100%;
+            background: transparent;
+            border: none;
+            outline: none;
+            color: #fff;
+            background: #1890ff;
+            padding: 10px 20px;
+            cursor: pointer;
+
         }
         .txtb{
             border-bottom: 2px solid #e5e5e5;
@@ -72,6 +120,7 @@
             position: absolute;
             top: 50%;
             left:5px;
+            font-size: 12px;
             color: #adadad;
             transform: translateY(-50%);
             z-index: -1;
@@ -90,49 +139,50 @@
         .focus + span::after{
             width:100%;
         }
-        .logbtn{
-            display: block;
-            width: 100%;
-            height: 55px;
-            border: none;
-            background-color: #1890ff;
-            background-size: 200%;
-            color: #fff;
-            outline: none;
-            cursor: pointer;
-            transition: .5s;
-            font-weight: bold;
-            font-family: Microsoft YaHei;
-            font-size: 18px;
-        }
         .blk{
             height: 3px;
             width: 360px;
             background-color: #1890ff;
             position: relative;
-            top: -80px;
+            top: -187px;
             left: -40px;
         }
 
     </style>
 </head>
 <body>
-    <img src="../images/beijing.jpg" >
-    <form method="post" action="${ctx}/login" class="login-form">
-        <div class="blk"></div>
-        <h1>欢迎登录<br>企业ERP管理系统</h1>
-        <div class="txtb">
-            <input type="text" name="loginname" value="${loginname}">
-            <span data-placeholder="用户名" ></span>
-        </div>
-        <div class="txtb">
-            <input type="password" name="password">
-            <span data-placeholder="密码"></span>
-        </div>
+<%--    <img src="../images/beijing.jpg" >--%>
+<%--    <form method="post" action="${ctx}/login" class="login-form">--%>
+<%--        <div class="blk"></div>--%>
+<%--        <h1>欢迎登录<br>企业ERP管理系统</h1>--%>
+<%--        <div class="txtb">--%>
+<%--            <input type="text" name="loginname" value="${loginname}">--%>
+<%--            <span data-placeholder="用户名" ></span>--%>
+<%--        </div>--%>
+<%--        <div class="txtb">--%>
+<%--            <input type="password" name="password">--%>
+<%--            <span data-placeholder="密码"></span>--%>
+<%--        </div>--%>
 
-        <input type="submit" class="logbtn" value="登 录">
-        ${requestScope.message}
-    </form>
+<%--        <input type="submit" class="logbtn" value="登 录">--%>
+<%--        ${requestScope.message}--%>
+<%--    </form>--%>
+    <div class="login-box">
+        <h1>欢迎登录<br>企业ERP管理系统</h1>
+        <form method="post" action="${ctx}/login">
+            <div class="blk"></div>
+            <div class="txtb">
+                <input type="text" name="loginname" value="${loginname}">
+                <span data-placeholder="用户名"></span>
+            </div>
+            <div class="txtb">
+                <input type="password" name="password">
+                <span data-placeholder="密码"></span>
+            </div>
+            <input type="submit" class="logbtn" value="登 录" style="font-family: Microsoft YaHei;font-size: 18px;">
+<%--            ${requestScope.message}--%>
+        </form>
+    </div>
     <script type="text/javascript">
         $(".txtb input").on("focus",function(){
             $(this).addClass("focus");
